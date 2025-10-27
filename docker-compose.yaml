@@ -25,6 +25,7 @@ services:
       - dev
       - main
       - dependency
+      - playwright
 
   pdf-loader:
     build: ./postgres
@@ -39,6 +40,7 @@ services:
       - dev
       - main
       - dependency
+      - playwright
 
   grafana-dev:
     image: ghcr.io/volkovlabs/app:latest
@@ -94,6 +96,8 @@ services:
     depends_on:
       grafana:
         condition: service_healthy
+      pdf-loader:
+        condition: service_completed_successfully
     profiles:
       - e2e
       - playwright
