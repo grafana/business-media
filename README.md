@@ -6,7 +6,7 @@
 
 >This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-media) - thanks for all your great work!
 >
->We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-calendar/blob/main/NOTICES.md).
+>We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-media/blob/main/NOTICES.md).
 
 **Business Media** is a powerful Grafana plugin designed to display a variety of media files, including PNG, JPG, GIF, MP4, WEBM, MP3, OGG, and PDF, using base64 encoding or direct URLs. Seamlessly integrate multimedia content into your Grafana dashboards with ease and flexibility.
 
