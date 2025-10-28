@@ -7,25 +7,12 @@
   "id": "volkovlabs-image-panel",
   "info": {
     "author": {
-      "name": "Volkov Labs",
-      "url": "https://volkovlabs.io"
+      "name": "Grafana Labs",
+      "url": "https://grafana.com"
     },
     "description": "Display Base64 encoded and URL media files",
     "keywords": ["image", "base64", "jpg", "gif", "png", "pdf"],
-    "links": [
-      {
-        "name": "Documentation",
-        "url": "https://volkovlabs.io/plugins/business-media/"
-      },
-      {
-        "name": "GitHub",
-        "url": "https://github.com/volkovlabs/business-media"
-      },
-      {
-        "name": "Sponsor",
-        "url": "https://volkovlabs.io/pricing/"
-      }
-    ],
+    "links": [],
     "logos": {
       "large": "img/logo.svg",
       "small": "img/logo.svg"
