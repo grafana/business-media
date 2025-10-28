@@ -1,4 +1,11 @@
 services:
+  grafana:
+    extends:
+      file: .config/docker-compose-base.yaml
+      service: grafana
+    ports:
+      - 3000:3000/tcp
+
   postgres:
     image: postgres
     restart: always
@@ -18,6 +25,7 @@ services:
       - dev
       - main
       - dependency
+      - playwright
 
   pdf-loader:
     build: ./postgres
@@ -32,8 +40,9 @@ services:
       - dev
       - main
       - dependency
+      - playwright
 
-  grafana:
+  grafana-dev:
     image: ghcr.io/volkovlabs/app:latest
     ports:
       - 3000:3000/tcp
@@ -75,15 +84,20 @@ services:
     profiles:
       - dependency
 
-  test:
+  playwright:
     build:
       context: .
       dockerfile: test/Dockerfile
     environment:
-      - GRAFANA_URL=http://127.0.0.1:3000
+      - GRAFANA_URL=http://grafana:3000
     volumes:
       - ./test:/app/test
       - ./playwright-report:/app/playwright-report
-    network_mode: host
+    depends_on:
+      grafana:
+        condition: service_healthy
+      pdf-loader:
+        condition: service_completed_successfully
     profiles:
       - e2e
+      - playwright

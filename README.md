@@ -1,16 +1,14 @@
 # Business Media for Grafana
 
-![Media](https://raw.githubusercontent.com/volkovlabs/business-media/main/src/img/image-panel.png)
+[![CI](https://github.com/grafana/business-media/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-media/actions/workflows/push.yml)
+[![CD](https://github.com/grafana/business-media/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-media/actions/workflows/publish.yml)
+[![License](https://img.shields.io/github/license/grafana/business-media)](https://github.com/grafana/business-media/blob/main/LICENSE)
 
-[![Grafana](https://img.shields.io/badge/Grafana-12.0-orange)](https://grafana.com/)
-[![CI](https://github.com/volkovlabs/business-media/workflows/CI/badge.svg)](https://github.com/volkovlabs/business-media/actions/workflows/ci.yml)
-[![E2E](https://github.com/volkovlabs/business-media/workflows/E2E/badge.svg)](https://github.com/volkovlabs/business-media/actions/workflows/e2e.yml)
-[![Codecov](https://codecov.io/gh/VolkovLabs/business-media/branch/main/graph/badge.svg)](https://codecov.io/gh/VolkovLabs/business-media)
-[![CodeQL](https://github.com/VolkovLabs/business-media/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/VolkovLabs/business-media/actions/workflows/codeql-analysis.yml)
+>This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-media) - thanks for all your great work!
+>
+>We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-media/blob/main/NOTICES.md).
 
 **Business Media** is a powerful Grafana plugin designed to display a variety of media files, including PNG, JPG, GIF, MP4, WEBM, MP3, OGG, and PDF, using base64 encoding or direct URLs. Seamlessly integrate multimedia content into your Grafana dashboards with ease and flexibility.
-
-[![Display Images and PDFs in Grafana with Business Media](https://raw.githubusercontent.com/volkovlabs/business-media/main/img/overview.png)](https://youtu.be/hLMtsCWPOg8)
 
 ## 🚀 Features
 
@@ -46,8 +44,6 @@ Install the Business Media panel via the [Grafana Plugins Catalog](https://grafa
 grafana cli plugins install volkovlabs-image-panel
 ```
 
-[![Install Business Suite Plugins in Cloud, OSS, and Enterprise](https://raw.githubusercontent.com/volkovlabs/.github/main/started.png)](https://youtu.be/1qYzHfPXJF8)
-
 ## 📚 Documentation
 
 Explore detailed guides and resources to make the most of the Business Media panel:
@@ -60,12 +56,6 @@ Explore detailed guides and resources to make the most of the Business Media pan
 | [Tutorials](https://volkovlabs.io/plugins/business-media/tutorials/)       | Follow step-by-step guides for common use cases.             |
 | [Release Notes](https://volkovlabs.io/plugins/business-media/release/)     | Stay updated with the latest features and improvements.      |
 
-## 🌟 Business Suite for Grafana
-
-The **Business Suite** is a collection of open-source plugins developed and maintained by Volkov Labs. Designed to address common business needs, these plugins offer intuitive interfaces, comprehensive documentation, practical examples, and video tutorials.
-
-[![Business Suite for Grafana](https://raw.githubusercontent.com/VolkovLabs/.github/main/business.png)](https://volkovlabs.io/plugins/)
-
 ## 📜 License
 
-This project is licensed under the Apache License Version 2.0. See the [LICENSE](https://github.com/volkovlabs/business-media/blob/main/LICENSE) file for details.
+This project is licensed under the Apache License Version 2.0. See the [LICENSE](https://github.com/grafana/business-media/blob/main/LICENSE) file for details.
