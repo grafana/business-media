@@ -1,7 +1,6 @@
 import { FieldType, StandardEditorProps } from '@grafana/data';
-import { Button, Icon, InlineField, InlineFieldRow, Select, useTheme2 } from '@grafana/ui';
+import { Button, Collapse, Icon, InlineField, InlineFieldRow, Select, Stack, useTheme2 } from '@grafana/ui';
 import { DragDropContext, Draggable, DraggingStyle, Droppable, DropResult, NotDraggingStyle } from '@hello-pangea/dnd';
-import { Collapse } from '@volkovlabs/components';
 import React, { useCallback, useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -137,30 +136,32 @@ export const MediaSourcesEditor: React.FC<Props> = ({ item, value, onChange, con
                       className={styles.item}
                     >
                       <Collapse
-                        headerTestId={TEST_IDS.mediaSourceEditor.itemHeader(item.id)}
-                        contentTestId={TEST_IDS.mediaSourceEditor.itemContent(item.id)}
                         isOpen={collapseState[item.id]}
                         onToggle={() => onToggleItem(item)}
-                        title={<>{`${item.type} - [${item.field}]`}</>}
-                        actions={
-                          <>
-                            <Button
-                              icon="trash-alt"
-                              variant="secondary"
-                              fill="text"
-                              size="sm"
-                              onClick={() => {
-                                /**
-                                 * Remove Item
-                                 */
-                                onChangeSources(sources.filter((source) => source.id !== item.id));
-                              }}
-                              data-testid={TEST_IDS.mediaSourceEditor.buttonRemove}
-                            />
-                            <div {...provided.dragHandleProps}>
-                              <Icon name="draggabledots" />
-                            </div>
-                          </>
+                        label={
+                          <Stack flex={1} alignItems="center" justifyContent="space-between">
+                            <>{`${item.type} - [${item.field}]`}</>
+                            <Stack alignItems="center">
+                              <Button
+                                icon="trash-alt"
+                                variant="secondary"
+                                fill="text"
+                                size="sm"
+                                aria-label="Remove media source"
+                                onClick={(event) => {
+                                  /**
+                                   * Remove Item
+                                   */
+                                  event.stopPropagation();
+                                  onChangeSources(sources.filter((source) => source.id !== item.id));
+                                }}
+                                data-testid={TEST_IDS.mediaSourceEditor.buttonRemove}
+                              />
+                              <div {...provided.dragHandleProps} onClick={(event) => event.stopPropagation()}>
+                                <Icon name="draggabledots" />
+                              </div>
+                            </Stack>
+                          </Stack>
                         }
                       >
                         <>
