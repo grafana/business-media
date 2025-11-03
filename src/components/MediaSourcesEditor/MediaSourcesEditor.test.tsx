@@ -60,27 +60,16 @@ describe('Series Editor', () => {
    * Open Item
    * @param id
    */
-  const openItem = (id: string): ReturnType<typeof getSelectors> => {
+  const openItem = (name: string) => {
     /**
      * Check item presence
      */
-    expect(selectors.itemHeader(false, id)).toBeInTheDocument();
+    expect(screen.getByText(name)).toBeInTheDocument();
 
     /**
      * Make Item is opened
      */
-    fireEvent.click(selectors.itemHeader(false, id));
-
-    /**
-     * Check if item content exists
-     */
-    const elementContent = selectors.itemContent(false, id);
-    expect(elementContent).toBeInTheDocument();
-
-    /**
-     * Return selectors for opened item
-     */
-    return getSelectors(within(elementContent));
+    fireEvent.click(screen.getByText(name));
   };
 
   /**
@@ -131,8 +120,8 @@ describe('Series Editor', () => {
     render(getComponent({ item, value, context }));
 
     expect(selectors.root()).toBeInTheDocument();
-    expect(selectors.itemHeader(false, 'img1')).toBeInTheDocument();
-    expect(selectors.itemHeader(false, 'vid1')).toBeInTheDocument();
+    expect(screen.getByText('image - [imgUrl]')).toBeInTheDocument();
+    expect(screen.getByText('video - [videoURL]')).toBeInTheDocument();
   });
 
   it('Should remove source', () => {
@@ -162,9 +151,9 @@ describe('Series Editor', () => {
     );
 
     expect(selectors.root()).toBeInTheDocument();
-    const image = selectors.itemHeader(false, 'img1');
 
-    fireEvent.click(getSelectors(within(image)).buttonRemove());
+    const removeButtons = screen.getAllByTestId(TEST_IDS.mediaSourceEditor.buttonRemove);
+    fireEvent.click(removeButtons[0]);
 
     rerender(
       getComponent({
@@ -175,8 +164,8 @@ describe('Series Editor', () => {
       })
     );
 
-    expect(selectors.itemHeader(true, 'img1')).not.toBeInTheDocument();
-    expect(selectors.itemHeader(true, 'vid1')).toBeInTheDocument();
+    expect(screen.queryByText('image - [imgUrl]')).not.toBeInTheDocument();
+    expect(screen.getByText('video - [videoURL]')).toBeInTheDocument();
   });
 
   describe('Add new source', () => {
@@ -248,7 +237,7 @@ describe('Series Editor', () => {
         })
       );
 
-      expect(selectors.itemHeader(false, 'new-media')).toBeInTheDocument();
+      expect(screen.getByText('audio - [audioURL]')).toBeInTheDocument();
     });
 
     it('Should not allow add with specified one field or name', async () => {
@@ -379,9 +368,8 @@ describe('Series Editor', () => {
        * Check if items order is changed
        */
       const items = screen.getAllByTestId('draggable');
-
-      expect(getSelectors(within(items[0])).itemHeader(false, 'video1')).toBeInTheDocument();
-      expect(getSelectors(within(items[1])).itemHeader(false, 'img1')).toBeInTheDocument();
+      expect(within(items[0]).getByText('image - [videoURL]')).toBeInTheDocument();
+      expect(within(items[1]).getByText('image - [imgURL]')).toBeInTheDocument();
     });
 
     it('Should not reorder sources if drop outside the list', async () => {
@@ -453,8 +441,8 @@ describe('Series Editor', () => {
        */
       const items = screen.getAllByTestId('draggable');
 
-      expect(getSelectors(within(items[0])).itemHeader(false, 'img1')).toBeInTheDocument();
-      expect(getSelectors(within(items[1])).itemHeader(false, 'video1')).toBeInTheDocument();
+      expect(within(items[0]).getByText('image - [imgURL]')).toBeInTheDocument();
+      expect(within(items[1]).getByText('image - [videoURL]')).toBeInTheDocument();
     });
   });
 
@@ -514,12 +502,12 @@ describe('Series Editor', () => {
         })
       );
 
-      expect(selectors.itemHeader(false, 'img1')).toHaveTextContent('image - [imgURL]');
+      expect(screen.getByText('image - [imgURL]')).toBeInTheDocument();
 
-      const source = openItem('img1');
+      openItem('image - [imgURL]');
 
-      expect(source.fieldType()).toBeInTheDocument();
-      fireEvent.change(source.fieldType(), { target: { value: MediaFormat.AUDIO } });
+      expect(screen.getByLabelText('Type')).toBeInTheDocument();
+      fireEvent.change(screen.getByLabelText('Type'), { target: { value: MediaFormat.AUDIO } });
 
       rerender(
         getComponent({
@@ -530,8 +518,7 @@ describe('Series Editor', () => {
         })
       );
 
-      expect(selectors.itemHeader(false, 'img1')).toBeInTheDocument();
-      expect(selectors.itemHeader(false, 'img1')).toHaveTextContent('audio - [imgURL]');
+      expect(screen.getByText('audio - [imgURL]')).toBeInTheDocument;
     });
 
     it('Should update field', () => {
@@ -559,12 +546,12 @@ describe('Series Editor', () => {
         })
       );
 
-      expect(selectors.itemHeader(false, 'img1')).toHaveTextContent('image - [imgURL]');
+      expect(screen.getByText('image - [imgURL]')).toBeInTheDocument();
 
-      const source = openItem('img1');
+      openItem('image - [imgURL]');
 
-      expect(source.fieldType()).toBeInTheDocument();
-      fireEvent.change(source.fieldName(), { target: { value: 'videoURL' } });
+      expect(screen.getByLabelText('Field')).toBeInTheDocument();
+      fireEvent.change(screen.getByLabelText('Field'), { target: { value: 'videoURL' } });
 
       rerender(
         getComponent({
@@ -575,8 +562,7 @@ describe('Series Editor', () => {
         })
       );
 
-      expect(selectors.itemHeader(false, 'img1')).toBeInTheDocument();
-      expect(selectors.itemHeader(false, 'img1')).toHaveTextContent('image - [videoURL]');
+      expect(screen.getAllByText('image - [videoURL]')).toHaveLength(2);
     });
   });
 });

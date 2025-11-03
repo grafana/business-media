@@ -1,7 +1,7 @@
 import { FieldType, StandardEditorProps } from '@grafana/data';
 import { Button, Collapse, Icon, InlineField, InlineFieldRow, Select, Stack, useTheme2 } from '@grafana/ui';
 import { DragDropContext, Draggable, DraggingStyle, Droppable, DropResult, NotDraggingStyle } from '@hello-pangea/dnd';
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useId, useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import { MEDIA_TYPES_OPTIONS, TEST_IDS } from '../../constants';
@@ -45,6 +45,8 @@ export const MediaSourcesEditor: React.FC<Props> = ({ item, value, onChange, con
    */
   const theme = useTheme2();
   const styles = getStyles(theme);
+  const typeId = useId();
+  const fieldId = useId();
 
   /**
    * States
@@ -167,6 +169,7 @@ export const MediaSourcesEditor: React.FC<Props> = ({ item, value, onChange, con
                         <>
                           <InlineField label="Type" grow={true}>
                             <Select
+                              id={typeId}
                               placeholder={'Change source type'}
                               onChange={(element) => {
                                 if (element.value) {
@@ -190,6 +193,7 @@ export const MediaSourcesEditor: React.FC<Props> = ({ item, value, onChange, con
                           </InlineField>
                           <InlineField label="Field" grow={true}>
                             <Select
+                              id={fieldId}
                               value={`${item.refId ? `${item.refId}:` : ''}${item.field}`}
                               onChange={(element) => {
                                 const updatedSources = sources.map((source) => {
