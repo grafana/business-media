@@ -10,17 +10,17 @@ import { ImagePanel } from './ImagePanel';
 /**
  * Mock @grafana/ui
  */
-// jest.mock('@grafana/ui', () => ({
-//   ...jest.requireActual('@grafana/ui'),
-//   PageToolbar: jest.fn(({ leftItems, children }) => {
-//     return (
-//       <>
-//         {leftItems}
-//         {children}
-//       </>
-//     );
-//   }),
-// }));
+jest.mock('@grafana/ui', () => ({
+  ...jest.requireActual('@grafana/ui'),
+  PageToolbar: jest.fn(({ leftItems, children }) => {
+    return (
+      <>
+        {leftItems}
+        {children}
+      </>
+    );
+  }),
+}));
 
 /**
  * Mock file-saver
