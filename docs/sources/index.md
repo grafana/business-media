@@ -1,0 +1,69 @@
+---
+tags:
+  - Business Media
+image: /img/plugins/business-media/panel.png
+title: 'Business Media'
+description: 'Learn about Business Media in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+---
+import Feedback from "../_feedback.mdx";
+import GettingStarted from "./_getting_started.mdx";
+import Image from "@theme/Image";
+import Tutorial from "./_tutorial.mdx";
+import Youtube from "@theme/Youtube";
+
+# Business Media
+
+The Business Media panel is a Grafana plugin that renders PNG, JPG, GIF, MP4, WEBM, MP3, OGG, and PDF files encoded in the base64 format and URL.
+
+The panel offers great flexibility, allowing users to display multiple media files and flip through them. You can mix and match any supported formats for multi-media file visualizations, allowing you to create the desired visual experience.
+
+## Requirements
+
+The Business Media panel version requirements for Grafana are as follows:
+
+- Business Media panel 7.X requires **Grafana 11** or **Grafana 12**.
+- Business Media panel 6.X requires **Grafana 10** or **Grafana 11**.
+- Business Media panel 5.X requires **Grafana 10** or **Grafana 11**.
+- Base64 Image/PDF panel 4.X requires **Grafana 9** or **Grafana 10**.
+- Base64 Image/PDF panel 3.X requires **Grafana 8.5** or **Grafana 9**.
+- Base64 Image/PDF panel 2.X requires **Grafana 8**.
+- Base64 Image/PDF panel 1.X requires **Grafana 7.1**.
+
+<GettingStarted />
+
+## Highlights
+
+- The media file can be specified in the base64 format or as a URL link.
+- Multiple media files display with pagination functionality.
+- The returned value can include base64 encoded content with or without a specified definition. The formats for the definition can look like `data:image/jpg;base64,ENCODED-CONTENT` or `data:application/pdf;base64,ENCODED-CONTENT`.
+- If the data source returns more than one field of the `string` type, you can select the Field Name in the panel's display options.
+- You can fit image dimensions to the panel size, keep the original values, or adjust dimensions based on the manually supplied values.
+- Allows adding a URL with a title to navigate to other dashboards when clicking the image. URL supports dashboard variables.
+- Provides a toolbar to download, zoom, and navigate between media files.
+
+<Image
+  title="How to start with the Business Media panel."
+  src="/img/plugins/business-media/media-7.png"
+/>
+
+<Tutorial />
+
+## Documentation
+
+| Section                      | Description                                                         |
+| ---------------------------- | ------------------------------------------------------------------- |
+| [Supported formats](formats) | Explains what formats are supported and how to display media files. |
+| [Options](options)           | Describes all plugin options                                        |
+| [Features](features)         | Demonstrates panel capabilities.                                    |
+| [Tutorials](tutorials)       | Easy to follow tutorials                                            |
+| [Release Notes](release)     | Stay up to date with the latest features and updates.               |
+
+## License
+
+Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-media/blob/main/LICENSE).
+
+<Feedback />
