@@ -1,11 +1,12 @@
 ---
 title: Business Media
-description: 'Learn how to display multiple media files including images, videos, audio, and PDFs on your Grafana dashboards using the Business Media panel plugin.'
+description: Learn how to display multiple media files including images, videos, audio, and PDFs on your Grafana dashboards using the Business Media panel plugin.
 keywords:
  - business media
 labels:
   products:
     - oss
+    - enterprise
     - cloud
 weight: 10
 ---

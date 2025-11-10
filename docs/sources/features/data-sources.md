@@ -6,6 +6,7 @@ keywords:
 labels:
   products:
     - oss
+    - enterprise
     - cloud
 ---
 import BlogPost from "@theme/BlogPost";

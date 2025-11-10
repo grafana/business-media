@@ -1,12 +1,13 @@
 ---
 title: Release notes
-description: 'Learn about the latest updates, new features, bug fixes, and breaking changes in each version of the Business Media panel.'
+description: Learn about the latest updates, new features, bug fixes, and breaking changes in each version of the Business Media panel.
 keywords:
   - business media
   - release notes
 labels:
   products:
     - oss
+    - enterprise
     - cloud
 weight: 60
 ---

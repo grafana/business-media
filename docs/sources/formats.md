@@ -1,11 +1,12 @@
 ---
 title: Supported formats
-description: 'Learn about the various media file formats supported by the Business Media panel, including images, PDFs, videos, and audio files.'
+description: Learn about the various media file formats supported by the Business Media panel, including images, PDFs, videos, and audio files.
 keywords:
  - business media
 labels:
   products:
     - oss
+    - enterprise
     - cloud
 weight: 20
 ---

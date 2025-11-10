@@ -1,11 +1,12 @@
 ---
 title: Options
-description: 'Learn how to configure all available options for the Business Media panel, including display settings, toolbar features, and media-specific parameters.'
+description: Learn how to configure all available options for the Business Media panel, including display settings, toolbar features, and media-specific parameters.
 keywords:
   - business media
 labels:
   products:
     - oss
+    - enterprise
     - cloud
 weight: 30
 ---

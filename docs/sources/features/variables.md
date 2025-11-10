@@ -1,12 +1,13 @@
 ---
 title: Variables
-description: 'Learn how to use dashboard and global variables with the Business Media panel to create dynamic media displays that respond to user selections.'
+description: Learn how to use dashboard and global variables with the Business Media panel to create dynamic media displays that respond to user selections.
 keywords:
   - business media
   - variables
 labels:
   products:
     - oss
+    - enterprise
     - cloud
 ---
 import BlogPost from "@theme/BlogPost";

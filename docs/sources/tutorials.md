@@ -1,11 +1,12 @@
 ---
 title: Tutorials
-description: 'Learn how to implement common use cases and get the most out of the Business Media panel with step-by-step tutorials and video guides.'
+description: Learn how to implement common use cases and get the most out of the Business Media panel with step-by-step tutorials and video guides.
 keywords:
   - business media
 labels:
   products:
     - oss
+    - enterprise
     - cloud
 weight: 50
 ---
