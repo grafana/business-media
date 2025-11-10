@@ -10,8 +10,6 @@ labels:
     - enterprise
     - cloud
 ---
-import BlogPost from "@theme/BlogPost";
-import Youtube from "@theme/Youtube";
 
 # Variables
 
@@ -29,8 +27,8 @@ The plugins used in the example are:
 - [The Business Variable panel](/plugins/business-variable/) to provide a choice of what file to display.
 - [The Business Media panel](/plugins/business-media/) to display a selected file.
 
-<BlogPost id="form-panel-file-upload-20240310" />
+Learn more in the File Upload using Grafana dashboard [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310).
 
 If you are a visual style learner, you can watch the video. It covers the same ground.
 
-<Youtube id="V4Sza0uDQNs" title="File Upload using Grafana dashboard." />
+{{< youtube id="V4Sza0uDQNs" >}}
