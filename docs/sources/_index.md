@@ -53,7 +53,7 @@ grafana cli plugins install volkovlabs-image-panel
 - Allows adding a URL with a title to navigate to other dashboards when clicking the image. URL supports dashboard variables.
 - Provides a toolbar to download, zoom, and navigate between media files.
 
-![How to start with the Business Media panel](/media/docs/grafana/panels-visualizations/business-media/media-7.png)
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/media-7.png" class="border" alt="How to start with the Business Media panel" >}}
 
 ## Tutorial
 
