@@ -10,11 +10,6 @@ labels:
     - cloud
 weight: 10
 ---
-import Feedback from "../_feedback.mdx";
-import GettingStarted from "./_getting_started.mdx";
-import Image from "@theme/Image";
-import Tutorial from "./_tutorial.mdx";
-import Youtube from "@theme/Youtube";
 
 # Business Media
 
@@ -38,10 +33,9 @@ The Business Media panel version requirements for Grafana are as follows:
 
 The Business Media panel can be installed from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) or using the Grafana command line tool.
 
-<Youtube
-  id="1qYzHfPXJF8"
-  title="Install Business Suite plugins in Cloud, OSS, Enterprise. Getting started with the Business Suite."
-/>
+{{< youtube id="1qYzHfPXJF8" >}}
+
+_Install Business Suite plugins in Cloud, OSS, Enterprise. Getting started with the Business Suite._
 
 For the latter, please use the following command.
 
@@ -59,10 +53,7 @@ grafana cli plugins install volkovlabs-image-panel
 - Allows adding a URL with a title to navigate to other dashboards when clicking the image. URL supports dashboard variables.
 - Provides a toolbar to download, zoom, and navigate between media files.
 
-<Image
-  title="How to start with the Business Media panel."
-  src="/img/plugins/business-media/media-7.png"
-/>
+![How to start with the Business Media panel](/media/docs/grafana/panels-visualizations/business-media/media-7.png)
 
 ## Tutorial
 
@@ -70,10 +61,9 @@ In this tutorial, Daria goes over all plugin options, version 5.0.0.
 
 You will learn how to display images, video, audio and PDF files on your Grafana dashboard. She demonstrates how to set up the toolbar, URL links, image scaling and other parameters.
 
-<Youtube
-  id="hLMtsCWPOg8"
-  title="Display images and PDF on Grafana using Business Media panel 5.0.0."
-/>
+{{< youtube id="hLMtsCWPOg8" >}}
+
+_Display images and PDF on Grafana using Business Media panel 5.0.0._
 
 We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-media/tutorials).
 
@@ -91,4 +81,3 @@ We have many other tutorials that you can find helpful. You can review all relat
 
 Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-media/blob/main/LICENSE).
 
-<Feedback />
