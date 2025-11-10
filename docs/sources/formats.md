@@ -1,6 +1,6 @@
 ---
 title: Supported formats
-description: 'Learn about Supported formats in Grafana'
+description: 'Learn about the various media file formats supported by the Business Media panel, including images, PDFs, videos, and audio files.'
 keywords:
  - business media
 labels:

@@ -1,6 +1,6 @@
 ---
 title: Variables
-description: 'Learn about Variables in Grafana'
+description: 'Learn how to use dashboard and global variables with the Business Media panel to create dynamic media displays that respond to user selections.'
 keywords:
   - business media
   - variables

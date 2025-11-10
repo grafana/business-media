@@ -1,6 +1,6 @@
 ---
 title: Tutorials
-description: 'Learn about Tutorials in Grafana'
+description: 'Learn how to implement common use cases and get the most out of the Business Media panel with step-by-step tutorials and video guides.'
 keywords:
   - business media
 labels:

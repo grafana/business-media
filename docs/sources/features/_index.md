@@ -1,6 +1,6 @@
 ---
 title: Features
-description: Learn about Features in Grafana
+description: Learn about the key features of the Business Media panel, including data source integration and variable support.
 keywords:
  - business media
  - features

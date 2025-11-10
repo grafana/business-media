@@ -1,6 +1,6 @@
 ---
 title: Release notes
-description: 'Learn about Release Notes in Grafana'
+description: 'Learn about the latest updates, new features, bug fixes, and breaking changes in each version of the Business Media panel.'
 keywords:
   - business media
   - release notes
