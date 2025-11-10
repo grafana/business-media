@@ -61,18 +61,18 @@ You will learn how to display images, video, audio and PDF files on your Grafana
 
 {{< youtube id="hLMtsCWPOg8" >}}
 
-We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-media/tutorials).
+We have many other tutorials that you can find helpful. You can review [all tutorials related to this plugin](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/tutorials/).
 
 ## Documentation
 
 | Section                      | Description                                                         |
 | ---------------------------- | ------------------------------------------------------------------- |
-| [Supported formats](formats) | Explains what formats are supported and how to display media files. |
-| [Options](options)           | Describes all plugin options                                        |
-| [Features](features)         | Demonstrates panel capabilities.                                    |
-| [Tutorials](tutorials)       | Easy to follow tutorials                                            |
-| [Release Notes](release)     | Stay up to date with the latest features and updates.               |
+| [Supported formats](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/formats/) | Explains what formats are supported and how to display media files. |
+| [Options](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/options)           | Describes all plugin options                                        |
+| [Features](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/features/)         | Demonstrates panel capabilities.                                    |
+| [Tutorials](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/tutorials/)       | Easy to follow tutorials                                            |
+| [Release notes](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/release/)     | Stay up to date with the latest features and updates.               |
 
 ## License
 
-Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-media/blob/main/LICENSE).
+Apache License Version 2.0, see [LICENSE](https://github.com/grafana/business-media/blob/main/LICENSE).

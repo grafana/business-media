@@ -18,7 +18,7 @@ A Business Input data source is the quickest way to get started. PostgreSQL is a
 
 ## Business Input
 
-You can use a [Business Input data source](/plugins/business-input/) to retrieve any supported Base64 formats and render them on your Grafana dashboard.
+You can use a [Business Input data source](https://grafana.com/grafana/plugins/marcusolsson-static-datasource/) to retrieve any supported Base64 formats and render them on your Grafana dashboard.
 
 {{< admonition type="note">}}
 
@@ -65,4 +65,4 @@ Load PDF, PNG, MP4, MP3, and other supported file formats into your database usi
 
 ## Websocket and MQTT
 
-[This article](https://volkovlabs.io/blog/streaming-images-business-media-20240903/) contains an example of effective collaboration between the Business Forms panel and two data sources (the Websocket and MQTT) to faciliate streaming images on your Grafana dashboard.
+[This blog post](https://volkovlabs.io/blog/streaming-images-business-media-20240903/) contains an example of effective collaboration between the Business Forms panel and two data sources (the Websocket and MQTT) to facilitate streaming images on your Grafana dashboard.

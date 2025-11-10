@@ -15,7 +15,7 @@ labels:
 
 The Business Media panel supports dashboard and global variables in the `Image URL` panel option.
 
-These three types of variables are explained in our [Grafana Crash Course](/grafana/variables).
+These three types of variables are explained in our [Grafana Crash Course](https://volkovlabs.io/grafana/variables/).
 
 ## Example of dashboard variable in the Base64 panel
 
@@ -23,9 +23,9 @@ Below you can find an example of how a dashboard variable can be used to dynamic
 
 The plugins used in the example are:
 
-- [The Business Forms panel](/plugins/business-forms/) to provide with the File type element for file upload.
-- [The Business Variable panel](/plugins/business-variable/) to provide a choice of what file to display.
-- [The Business Media panel](/plugins/business-media/) to display a selected file.
+- [The Business Forms panel](https://grafana.com/grafana/plugins/volkovlabs-form-panel/) to provide with the File type element for file upload.
+- [The Business Variable panel](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) to provide a choice of what file to display.
+- [The Business Media panel](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) to display a selected file.
 
 Learn more in the File Upload using Grafana dashboard [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310).
 

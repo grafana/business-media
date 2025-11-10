@@ -91,7 +91,7 @@ In the **Image** category there is one drop-down parameter **Scale Algorithm** t
 - **Pixelated**. The image is scaled with the "nearest neighbor" or similar algorithm, preserving a "pixelated" look as the image changes in size.
 
 {{< admonition type="note" >}}
-The **Crisp Edges** option is not supported in all browsers: https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering
+The **Crisp Edges** option is not supported in all browsers. Learn more in the [Mozilla CSS documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering).
 {{< /admonition >}}
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/auto-pix.png" class="border" alt="Difference between Auto and Pixelated Scale Algorithms" >}}

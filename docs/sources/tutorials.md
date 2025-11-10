@@ -23,7 +23,7 @@ This video is a detailed review of all configurable options. You will learn how 
 
 ## Websocket and MQTT
 
-[This article](https://volkovlabs.io/blog/streaming-images-business-media-20240903/) contains an example of effective collaboration between the Business Forms panel and two data sources (the Websocket and MQTT) to faciliate streaming images on your Grafana dashboard.
+[This blog post](https://volkovlabs.io/blog/streaming-images-business-media-20240903/) contains an example of effective collaboration between the Business Forms panel and two data sources (the Websocket and MQTT) to facilitate streaming images on your Grafana dashboard.
 
 ## File upload
 

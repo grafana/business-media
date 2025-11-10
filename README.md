@@ -50,11 +50,11 @@ Explore detailed guides and resources to make the most of the Business Media pan
 
 | Section                                                                    | Description                                                  |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [Supported Formats](https://volkovlabs.io/plugins/business-media/formats/) | Learn about supported media formats and how to display them. |
-| [Options](https://volkovlabs.io/plugins/business-media/options/)           | Understand all available configuration options.              |
-| [Features](https://volkovlabs.io/plugins/business-media/features/)         | Discover the full range of panel capabilities.               |
-| [Tutorials](https://volkovlabs.io/plugins/business-media/tutorials/)       | Follow step-by-step guides for common use cases.             |
-| [Release Notes](https://volkovlabs.io/plugins/business-media/release/)     | Stay updated with the latest features and improvements.      |
+| [Supported Formats](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/formats/) | Learn about supported media formats and how to display them. |
+| [Options](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/options/)           | Understand all available configuration options.              |
+| [Features](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/features/)         | Discover the full range of panel capabilities.               |
+| [Tutorials](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/tutorials/)       | Follow step-by-step guides for common use cases.             |
+| [Release notes](https://grafana.com/grafana/plugins/volkovlabs-image-panel/?tab=changelog)     | Stay updated with the latest features and improvements.      |
 
 ## 📜 License
 
