@@ -20,11 +20,11 @@ A Business Input data source is the quickest way to get started. PostgreSQL is a
 
 You can use a [Business Input data source](/plugins/business-input/) to retrieve any supported Base64 formats and render them on your Grafana dashboard.
 
-:::info Limitation
+{{< admonition type="note">}}
 
 The Business Input data source is an option for storing and retrieving small and medium-sized files. If you get the `413 Request Entity Too Long` error, it means that you have exceeded Grafana limits. You need to switch to the database or storage data source; PostgreSQL is an excellent choice for this.
 
-:::
+{{< /admonition >}}
 
 ## PostgreSQL
 
@@ -66,4 +66,3 @@ Load PDF, PNG, MP4, MP3, and other supported file formats into your database usi
 ## Websocket and MQTT
 
 [This article](https://volkovlabs.io/blog/streaming-images-business-media-20240903/) contains an example of effective collaboration between the Business Forms panel and two data sources (the Websocket and MQTT) to faciliate streaming images on your Grafana dashboard.
-

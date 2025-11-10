@@ -35,8 +35,6 @@ The Business Media panel can be installed from the [Grafana Plugins catalog](htt
 
 {{< youtube id="1qYzHfPXJF8" >}}
 
-_Install Business Suite plugins in Cloud, OSS, Enterprise. Getting started with the Business Suite._
-
 For the latter, please use the following command.
 
 ```sh
@@ -63,8 +61,6 @@ You will learn how to display images, video, audio and PDF files on your Grafana
 
 {{< youtube id="hLMtsCWPOg8" >}}
 
-_Display images and PDF on Grafana using Business Media panel 5.0.0._
-
 We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-media/tutorials).
 
 ## Documentation
@@ -80,4 +76,3 @@ We have many other tutorials that you can find helpful. You can review all relat
 ## License
 
 Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-media/blob/main/LICENSE).
-

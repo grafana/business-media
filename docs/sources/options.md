@@ -10,7 +10,6 @@ labels:
     - cloud
 weight: 30
 ---
-import Image from "@theme/Image";
 
 # Options
 
@@ -37,9 +36,9 @@ The **Text Options** category has the following parameters:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/img-desc.png" class="border" alt="Image description illustration" >}}
 
-:::info Version
+{{< admonition type="note" >}}
 Starting from release 5.0.0, you can customize a message displayed in case of image loading problems or no data found errors.
-:::
+{{< /admonition >}}
 
 - **No Results Message** customizable message to notify users of loading problems or no data found errors.
 
@@ -66,9 +65,9 @@ The Business Media panel offers a powerful toolbar. By enabling the **Display to
 
 ## URL
 
-:::info version
+{{< admonition type="note" >}}
 Starting from version 6.1.0, the **URL** category became obsolete since Grafana added the **Data links** category, which is fully supported by the Business Media panel.
-:::
+{{< /admonition >}}
 
 In the **URL** category, you can specify two parameters:
 
@@ -91,9 +90,9 @@ In the **Image** category there is one drop-down parameter **Scale Algorithm** t
 - **Crisp Edges**. The image is scaled with an algorithm that preserves contrast and edges in the image. Generally intended for images such as pixel art or line drawings, no blurring or color smoothing occurs.
 - **Pixelated**. The image is scaled with the "nearest neighbor" or similar algorithm, preserving a "pixelated" look as the image changes in size.
 
-:::info
+{{< admonition type="note" >}}
 The **Crisp Edges** option is not supported in all browsers: https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering
-:::
+{{< /admonition >}}
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/auto-pix.png" class="border" alt="Difference between Auto and Pixelated Scale Algorithms" >}}
 
@@ -123,9 +122,9 @@ The **Width** and **Height** categories allow control of the image size on the d
 
 ## Data links
 
-:::info version
+{{< admonition type="note" >}}
 The **Data links** feature is supported starting from the Business Media panel version 6.1.0
-:::
+{{< /admonition >}}
 
 Following Grafana 11 new features, we removed previously existing image links (the **URL** category) and allowed using a new **Data links** feature instead.
 
