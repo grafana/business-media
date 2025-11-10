@@ -15,7 +15,7 @@ import BlogPost from "@theme/BlogPost";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Release Notes
+# Release notes
 
 Explore the evolution of the Business Media panel through these release notes, detailing new features, enhancements, fixes, and breaking changes across all versions. Each release includes a summary to provide a quick overview of the key updates.
 
