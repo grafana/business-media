@@ -10,7 +10,6 @@ labels:
     - cloud
 weight: 20
 ---
-import Image from "@theme/Image";
 
 # Supported formats
 
@@ -27,19 +26,13 @@ The plugin determines the file type automatically based on the first base64 symb
 
 Other image formats supported by your browser can be rendered with the provided definition of the following pattern `data:image/IMAGE-FORMAT;base64,ENCODED-CONTENT`.
 
-<Image
-  title="The Business Media panel renders images on Grafana dashboard."
-  src="/img/plugins/business-media/panel.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/panel.png" class="border" alt="The Business Media panel renders images on Grafana dashboard" >}}
 
 ## PDF
 
 The plugin renders PDF files with the provided definition `data:application/pdf;base64,ENCODED-CONTENT` or without it.
 
-<Image
-  title="The Business Media panel renders PDF files on Grafana dashboard."
-  src="/img/plugins/business-media/pdf.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/pdf.png" class="border" alt="The Business Media panel renders PDF files on Grafana dashboard" >}}
 
 ## Video
 
@@ -48,10 +41,7 @@ The plugin renders video files with the provided definition, as follows:
 - MP4: `data:video/mp4;base64,ENCODED-CONTENT`
 - WEBM: `data:video/webm;base64,ENCODED-CONTENT`
 
-<Image
-  title="The Business Media panel allows to display media files on Grafana dashboard."
-  src="/img/plugins/business-media/video-comments.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/video-comments.png" class="border" alt="The Business Media panel allows to display media files on Grafana dashboard" >}}
 
 ## Audio
 
