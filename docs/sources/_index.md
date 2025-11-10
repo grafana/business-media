@@ -34,7 +34,7 @@ The Business Media panel version requirements for Grafana are as follows:
 - Base64 Image/PDF panel 2.X requires **Grafana 8**.
 - Base64 Image/PDF panel 1.X requires **Grafana 7.1**.
 
-## Getting Started
+## Getting started
 
 The Business Media panel can be installed from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) or using the Grafana command line tool.
 

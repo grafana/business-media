@@ -33,7 +33,7 @@ This article contains an example of effective collaboration between the Business
 
 <BlogPost id="streaming-images-business-media-20240903" />
 
-## File Upload
+## File upload
 
 Below is one of our YouTube videos with a use-case review. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task - file upload using a Grafana dashboard and immediate display of the uploaded files.
 
@@ -43,7 +43,7 @@ You can find implementation details in the blog post.
 
 <BlogPost id="form-panel-file-upload-20240310" />
 
-## Images, PDFs, Video, Live Camera Feed on Grafana Dashboard
+## Images, PDFs, video, live camera feed on Grafana dashboard
 
 Base64 Image/PDF panel displays images, PDF files, and videos captured in a database. In addition, the plugin works great to display a live camera feed. You will find a quick tutorial, along with inspiring demos, in this video.
 

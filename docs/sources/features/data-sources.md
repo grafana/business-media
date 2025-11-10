@@ -1,6 +1,6 @@
 ---
 title: Data sources
-description: Learn how to connect the Business Media panel to various data sources to retrieve and display media files stored in base64 format.
+description: Learn how to connect the Business Media panel to various data sources to retrieve and display media files stored in Base64 format.
 keywords:
  - business media
 labels:
