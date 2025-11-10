@@ -16,10 +16,7 @@ import Image from "@theme/Image";
 
 Below, you can find descriptions of all existing plugin options. The Business Media panel allows for the simultaneous displaying of multi-type media files. The three categories of options (**PDF**, **Image**, **Video/Audio**) are conditionally available depending on the added **Media Source Types** in the **Business Media** category.
 
-<Image
-  title="All the Business Media panel options."
-  src="/img/plugins/business-media/options.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/options.png" class="border" alt="All the Business Media panel options" >}}
 
 ## Business Media
 
@@ -30,10 +27,7 @@ The **Business Media** category has the following parameters:
 
 You can specify as many files as needed by using the **+Add** button.
 
-<Image
-  title="The parameters of the Business Media category."
-  src="/img/plugins/business-media/opt-bm.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/opt-bm.png" class="border" alt="The parameters of the Business Media category" >}}
 
 ## Text Options
 
@@ -41,10 +35,7 @@ The **Text Options** category has the following parameters:
 
 - **Field description** is a description displayed under the image specified as a data frame column name.
 
-<Image
-  title="Image description illustration."
-  src="/img/plugins/business-media/img-desc.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/img-desc.png" class="border" alt="Image description illustration" >}}
 
 :::info Version
 Starting from release 5.0.0, you can customize a message displayed in case of image loading problems or no data found errors.
@@ -52,27 +43,18 @@ Starting from release 5.0.0, you can customize a message displayed in case of im
 
 - **No Results Message** customizable message to notify users of loading problems or no data found errors.
 
-<Image
-  title="No Result Message illustration."
-  src="/img/plugins/business-media/nothing.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/nothing.png" class="border" alt="No Result Message illustration" >}}
 
 ## Toolbar
 
 The Business Media panel offers a powerful toolbar. By enabling the **Display toolbar** and specifying the desired **Features**, you can customize it to suit your needs.
 
-<Image
-  title="The Toolbar section and available features."
-  src="/img/plugins/business-media/toolbar.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/toolbar.png" class="border" alt="The Toolbar section and available features" >}}
 
 - **Auto play**. Works when multiple media files are added. When a user clicks on the **Play** toolbar button, the images will switch from the first to the following with the specified **Auto play interval** until the last image.
   If the **Auto Play infinity** is **Enabled**, then the switching starts again from the beginning automatically.
 
-<Image
-  title="The Toolbar feature - Auto Play."
-  src="/img/plugins/business-media/auto-switch.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/auto-switch.png" class="border" alt="The Toolbar feature - Auto Play" >}}
 
 - **Download**. Works for the **Image** type only. This enables a button that triggers the downloading of the selected image.
 - **Navigation**. This enables a set of buttons to page media files back and forward.
@@ -80,10 +62,7 @@ The Business Media panel offers a powerful toolbar. By enabling the **Display to
   - **Full Screen**. This enables one button that allows your image to be opened in full-screen mode.
   - **Pan and Pinch**. This enables three buttons to zoom in and out of your image.
 
-<Image
-  title="The Toolbar features - Download, Navigation, Zoom."
-  src="/img/plugins/business-media/down-nav-zoom.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/down-nav-zoom.png" class="border" alt="The Toolbar features - Download, Navigation, Zoom" >}}
 
 ## URL
 
@@ -96,19 +75,13 @@ In the **URL** category, you can specify two parameters:
 - **Image URL**. This address will be opened after a user clicks on the image.
 - **Title**. This text will pop up when a user hovers a mouse over the image.
 
-<Image
-  title="In the URL category, you can specify the Image URL address and the Title."
-  src="/img/plugins/business-media/url.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/url.png" class="border" alt="In the URL category, you can specify the Image URL address and the Title" >}}
 
 ## PDF
 
 Most browsers have a PDF toolbar by default. You can disable that default if needed.
 
-<Image
-  title="The Business Media panel provides an option to disable a browser's PDF toolbar."
-  src="/img/plugins/business-media/pdf.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/pdf.png" class="border" alt="The Business Media panel provides an option to disable a browser's PDF toolbar" >}}
 
 ## Image
 
@@ -122,10 +95,7 @@ In the **Image** category there is one drop-down parameter **Scale Algorithm** t
 The **Crisp Edges** option is not supported in all browsers: https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering
 :::
 
-<Image
-  title="Difference between Auto and Pixelated Scale Algorithms."
-  src="/img/blog/2023-10-29-image-panel-4.1.0/auto-pix.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/auto-pix.png" class="border" alt="Difference between Auto and Pixelated Scale Algorithms" >}}
 
 ## Video/Audio
 
@@ -136,31 +106,20 @@ In the **Video/Audio** category, there are specific to these formats parameters:
 - **Infinity Play**. With **Enabled**, the file plays in an endless loop.
 - **Poster Image**. You can specify a poster image (thumbnail) file for your video files. A poster image is an image that is shown before the user clicks on the play button (unless the **Auto play** is enabled). The image can be in the base64 format or a link to the external web resource.
 
-<Image
-  title="Parameters for video and audio files."
-  src="/img/plugins/business-media/video.png"
-  width="70%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/video.png" class="border" alt="Parameters for video and audio files" >}}
 
 ## Width and Height
 
 The **Width** and **Height** categories allow control of the image size on the dashboard.
 
-<Image
-  title="The sizing options for images."
-  src="/img/plugins/business-media/w-h.png"
-  width="70%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/w-h.png" class="border" alt="The sizing options for images" >}}
 
 - **Panel**. The width or height will fit the current panel size.
 - **Original**. The width or height will be taken from the original file.
 - **Custom**. Here you can either take the sizing from the connected data frame field or give a specific number in pixels.
 - **Original with scroll**. You can allow scrolling only horizontally, vertically, or simultaneously in both directions.
 
-<Image
-  title="Allow scrolling images if they do not fit on the panel."
-  src="/img/blog/2024-09-06-business-media-6.1.0/scroll.gif"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-media/scroll.gif" >}}
 
 ## Data links
 
@@ -170,14 +129,8 @@ The **Data links** feature is supported starting from the Business Media panel v
 
 Following Grafana 11 new features, we removed previously existing image links (the **URL** category) and allowed using a new **Data links** feature instead.
 
-<Image
-  title="Use the Data links category to create links from Business Media panel."
-  src="/img/blog/2024-09-06-business-media-6.1.0/link.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/link.png" class="border" alt="Use the Data links category to create links from Business Media panel" >}}
 
 The links can open in the same tab or a new tab.
 
-<Image
-  title="The links can open in the same tab or a new tab."
-  src="/img/blog/2024-09-06-business-media-6.1.0/link-edit.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/link-edit.png" class="border" alt="The links can open in the same tab or a new tab" >}}
