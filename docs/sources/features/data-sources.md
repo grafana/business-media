@@ -9,9 +9,6 @@ labels:
     - enterprise
     - cloud
 ---
-import BlogPost from "@theme/BlogPost";
-import Code from "@theme/Code";
-import Image from "@theme/Image";
 
 # Data sources
 
@@ -45,10 +42,7 @@ where
   name = 'flow';
 ```
 
-<Image
-  title="The Business Media panel displays media files on Grafana dashboard."
-  src="/img/plugins/business-media/video-comments.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/video-comments.png" class="border" alt="The Business Media panel displays media files on Grafana dashboard" >}}
 
 The PostgreSQL database includes functions for working with the Base64 format.
 
@@ -67,15 +61,9 @@ CREATE TABLE videos (name text, video bytea, UNIQUE(name));
 CREATE TABLE audios (name text, audio bytea, UNIQUE(name));
 ```
 
-Load PDF, PNG, MP4, MP3, and other supported file formats into your database using the Node.js script.
-
-<Code
-  url="https://github.com/VolkovLabs/business-media/blob/main/postgres/load.ts"
-  language="js"
-/>
+Load PDF, PNG, MP4, MP3, and other supported file formats into your database using [the Node.js script](https://github.com/grafana/business-media/blob/main/postgres/load.ts).
 
 ## Websocket and MQTT
 
-This article contains an example of effective collaboration between the Business Forms panel and two data sources (the Websocket and MQTT) to faciliate streaming images on your Grafana dashboard.
+[This article](https://volkovlabs.io/blog/streaming-images-business-media-20240903/) contains an example of effective collaboration between the Business Forms panel and two data sources (the Websocket and MQTT) to faciliate streaming images on your Grafana dashboard.
 
-<BlogPost id="streaming-images-business-media-20240903" />
