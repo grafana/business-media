@@ -8,6 +8,7 @@ labels:
   products:
     - enterprise
     - oss
+weight: 10
 ---
 import Feedback from "../_feedback.mdx";
 import GettingStarted from "./_getting_started.mdx";
@@ -33,7 +34,20 @@ The Business Media panel version requirements for Grafana are as follows:
 - Base64 Image/PDF panel 2.X requires **Grafana 8**.
 - Base64 Image/PDF panel 1.X requires **Grafana 7.1**.
 
-<GettingStarted />
+## Getting Started
+
+The Business Media panel can be installed from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) or using the Grafana command line tool.
+
+<Youtube
+  id="1qYzHfPXJF8"
+  title="Install Business Suite plugins in Cloud, OSS, Enterprise. Getting started with the Business Suite."
+/>
+
+For the latter, please use the following command.
+
+```sh
+grafana cli plugins install volkovlabs-image-panel
+```
 
 ## Highlights
 
@@ -50,7 +64,18 @@ The Business Media panel version requirements for Grafana are as follows:
   src="/img/plugins/business-media/media-7.png"
 />
 
-<Tutorial />
+## Tutorial
+
+In this tutorial, Daria goes over all plugin options, version 5.0.0.
+
+You will learn how to display images, video, audio and PDF files on your Grafana dashboard. She demonstrates how to set up the toolbar, URL links, image scaling and other parameters.
+
+<Youtube
+  id="hLMtsCWPOg8"
+  title="Display images and PDF on Grafana using Business Media panel 5.0.0."
+/>
+
+We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-media/tutorials).
 
 ## Documentation
 
