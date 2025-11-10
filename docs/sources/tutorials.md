@@ -1,12 +1,12 @@
 ---
-tags:
-  - Business Media
-title: 'Tutorials'
+title: Tutorials
 description: 'Learn about Tutorials in Grafana'
+keywords:
+  - business media
 labels:
   products:
-    - enterprise
     - oss
+    - cloud
 weight: 50
 ---
 import BlogPost from "@theme/BlogPost";

@@ -1,19 +1,18 @@
 ---
-tags:
-  - Business Media
-image: /img/plugins/business-media/video-comments.png
-title: 'Data Sources'
+title: Data sources
 description: 'Learn about Data Sources in Grafana'
+keywords:
+ - business media
 labels:
   products:
-    - enterprise
     - oss
+    - cloud
 ---
 import BlogPost from "@theme/BlogPost";
 import Code from "@theme/Code";
 import Image from "@theme/Image";
 
-# Data Sources
+# Data sources
 
 The Business Media panel retrieves media data from the connected data source. You can use any suitable option to retrieve data in the base64 format.
 

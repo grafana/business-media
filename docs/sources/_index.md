@@ -1,13 +1,12 @@
 ---
-tags:
-  - Business Media
-image: /img/plugins/business-media/panel.png
-title: 'Business Media'
+title: Business Media
 description: 'Learn about Business Media in Grafana'
+keywords:
+ - business media
 labels:
   products:
-    - enterprise
     - oss
+    - cloud
 weight: 10
 ---
 import Feedback from "../_feedback.mdx";

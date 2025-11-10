@@ -1,13 +1,13 @@
 ---
-tags:
-  - Business Media
-  - Variables
-title: 'Variables'
+title: Variables
 description: 'Learn about Variables in Grafana'
+keywords:
+  - business media
+  - variables
 labels:
   products:
-    - enterprise
     - oss
+    - cloud
 ---
 import BlogPost from "@theme/BlogPost";
 import Youtube from "@theme/Youtube";

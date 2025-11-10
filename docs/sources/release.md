@@ -1,15 +1,13 @@
 ---
-tags:
-  - Business Media
-  - Release Notes
-image: /img/suite.png
-hide_table_of_contents: true
-title: 'Release Notes'
+title: Release notes
 description: 'Learn about Release Notes in Grafana'
+keywords:
+  - business media
+  - release notes
 labels:
   products:
-    - enterprise
     - oss
+    - cloud
 weight: 60
 ---
 import BlogPost from "@theme/BlogPost";

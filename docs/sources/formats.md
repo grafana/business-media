@@ -1,13 +1,12 @@
 ---
-tags:
-  - Business Media
-image: /img/plugins/business-media/panel.png
-title: 'Supported formats'
+title: Supported formats
 description: 'Learn about Supported formats in Grafana'
+keywords:
+ - business media
 labels:
   products:
-    - enterprise
     - oss
+    - cloud
 weight: 20
 ---
 import Image from "@theme/Image";

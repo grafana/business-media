@@ -1,13 +1,12 @@
 ---
-tags:
-  - Business Media
-image: /img/plugins/business-media/panel.png
-title: 'Options'
+title: Options
 description: 'Learn about Options in Grafana'
+keywords:
+  - business media
 labels:
   products:
-    - enterprise
     - oss
+    - cloud
 weight: 30
 ---
 import Image from "@theme/Image";

@@ -1,15 +1,16 @@
 ---
-tags:
-  - Business Media
-image: /img/plugins/business-media/panel.png
-title: 'Features'
-description: 'Learn about Features in Grafana'
+title: Features
+description: Learn about Features in Grafana
+keywords:
+ - business media
+ - features
 labels:
   products:
-    - enterprise
     - oss
+    - cloud
 weight: 40
 ---
+
 # Features
 
 The Business Media panel has the following features.
