@@ -105,13 +105,13 @@ In the **Video/Audio** category, there are specific to these formats parameters:
 - **Infinity Play**. With **Enabled**, the file plays in an endless loop.
 - **Poster Image**. You can specify a poster image (thumbnail) file for your video files. A poster image is an image that is shown before the user clicks on the play button (unless the **Auto play** is enabled). The image can be in the base64 format or a link to the external web resource.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-media/video.png" class="border" alt="Parameters for video and audio files" >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/video.png" max-width="600px" class="border" alt="Parameters for video and audio files" >}}
 
 ## Width and Height
 
 The **Width** and **Height** categories allow control of the image size on the dashboard.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-media/w-h.png" class="border" alt="The sizing options for images" >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/w-h.png" max-width="600px" class="border" alt="The sizing options for images" >}}
 
 - **Panel**. The width or height will fit the current panel size.
 - **Original**. The width or height will be taken from the original file.
@@ -132,4 +132,4 @@ Following Grafana 11 new features, we removed previously existing image links (t
 
 The links can open in the same tab or a new tab.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-media/link-edit.png" class="border" alt="The links can open in the same tab or a new tab" >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-media/link-edit.png" max-width="600px" class="border" alt="The links can open in the same tab or a new tab" >}}
