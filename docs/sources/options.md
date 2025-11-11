@@ -118,7 +118,7 @@ The **Width** and **Height** categories allow control of the image size on the d
 - **Custom**. Here you can either take the sizing from the connected data frame field or give a specific number in pixels.
 - **Original with scroll**. You can allow scrolling only horizontally, vertically, or simultaneously in both directions.
 
-{{< video-embed src="/media/docs/grafana/panels-visualizations/business-media/scroll.gif" >}}
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-media/scroll-2.mp4" class="border" >}}
 
 ## Data links
 
