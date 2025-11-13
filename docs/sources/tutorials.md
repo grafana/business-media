@@ -13,7 +13,7 @@ weight: 50
 
 # Tutorials
 
-We’re dedicated to crafting clear, step-by-step video tutorials that showcase new features and tackle the most common challenges users face. The goal is to make your experience with Business Suite as seamless and productive as possible.
+This page contains clear, step-by-step video tutorials that showcase new features and tackle the most common challenges users face. The goal is to make your experience with Business Suite as seamless and productive as possible.
 
 ## Features overview of the Business Media 5.0.0
 
