@@ -84,7 +84,7 @@ Most browsers have a PDF toolbar by default. You can disable that default if nee
 
 ## Image
 
-In the **Image** category there is one drop-down parameter **Scale Algorithm** to specify how scaling of the image should be done. We have three options to choose from:
+In the **Image** category there is one drop-down parameter **Scale Algorithm** to specify how scaling of the image should be done. There are three options to choose from:
 
 - **Auto**. A browser chooses the best available algorithm.
 - **Crisp Edges**. The image is scaled with an algorithm that preserves contrast and edges in the image. Generally intended for images such as pixel art or line drawings, no blurring or color smoothing occurs.
@@ -126,7 +126,7 @@ The **Width** and **Height** categories allow control of the image size on the d
 The **Data links** feature is supported starting from the Business Media panel version 6.1.0
 {{< /admonition >}}
 
-Following Grafana 11 new features, we removed previously existing image links (the **URL** category) and allowed using a new **Data links** feature instead.
+Following Grafana 11 new features, previously existing image links were removed (the **URL** category) and allowed using a new **Data links** feature instead.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/link.png" class="border" alt="Use the Data links category to create links from Business Media panel" >}}
 

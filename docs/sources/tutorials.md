@@ -13,7 +13,7 @@ weight: 50
 
 # Tutorials
 
-We’re dedicated to crafting clear, step-by-step video tutorials that showcase new features and tackle the most common challenges our users face. Our goal is to make your experience with Business Suite as seamless and productive as possible.
+We’re dedicated to crafting clear, step-by-step video tutorials that showcase new features and tackle the most common challenges users face. The goal is to make your experience with Business Suite as seamless and productive as possible.
 
 ## Features overview of the Business Media 5.0.0
 
@@ -27,7 +27,7 @@ This video is a detailed review of all configurable options. You will learn how 
 
 ## File upload
 
-Below is one of our YouTube videos with a use-case review. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task - file upload using a Grafana dashboard and immediate display of the uploaded files.
+Below is a YouTube video with a use-case review. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task - file upload using a Grafana dashboard and immediate display of the uploaded files.
 
 {{< youtube id="V4Sza0uDQNs" >}}
 
@@ -41,7 +41,7 @@ Base64 Image/PDF panel displays images, PDF files, and videos captured in a data
 
 ## Display large PDF documents in Grafana
 
-During the creation of Business Media panel for one of our projects, we also included support for displaying PDF documents. It's satisfying to see that the plugin is now used to display PDF files stored in databases such as PostgreSQL.
+During the creation of Business Media panel for an existing project, support for displaying PDF documents was also included. It's satisfying to see that the plugin is now used to display PDF files stored in databases such as PostgreSQL.
 
 Learn more in the [blog post](https://volkovlabs.io/blog/using-grafana-to-display-large-pdf-documents-weve-got-you-covered-4e654e8d4bce/).
 

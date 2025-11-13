@@ -15,7 +15,7 @@ labels:
 
 The Business Media panel supports dashboard and global variables in the `Image URL` panel option.
 
-These three types of variables are explained in our [Grafana Crash Course](https://volkovlabs.io/grafana/variables/).
+These three types of variables are explained in the [Grafana Crash Course](https://volkovlabs.io/grafana/variables/).
 
 ## Example of dashboard variable in the Base64 panel
 

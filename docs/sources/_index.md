@@ -61,7 +61,7 @@ You will learn how to display images, video, audio and PDF files on your Grafana
 
 {{< youtube id="hLMtsCWPOg8" >}}
 
-We have many other tutorials that you can find helpful. You can review [all tutorials related to this plugin](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/tutorials/).
+There are many other tutorials that you can find helpful. You can review [all tutorials related to this plugin](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/tutorials/).
 
 ## Documentation
 
