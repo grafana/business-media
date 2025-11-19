@@ -12,7 +12,12 @@
     },
     "description": "Display Base64 encoded and URL media files",
     "keywords": ["image", "base64", "jpg", "gif", "png", "pdf"],
-    "links": [],
+    "links":  [
+      {
+        "name": "Documentation",
+        "url": "https://grafana.com/docs/plugins/volkovlabs-image-panel/"
+      }  
+    ],
     "logos": {
       "large": "img/logo.svg",
       "small": "img/logo.svg"
