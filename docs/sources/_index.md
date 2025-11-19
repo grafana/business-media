@@ -55,9 +55,9 @@ grafana cli plugins install volkovlabs-image-panel
 
 ## Tutorial
 
-In this tutorial, Daria goes over all plugin options, version 5.0.0.
+This tutorial explains all plugin options in version 5.0.0.
 
-You will learn how to display images, video, audio and PDF files on your Grafana dashboard. She demonstrates how to set up the toolbar, URL links, image scaling and other parameters.
+You will learn how to display images, video, audio and PDF files on your Grafana dashboard. The tutorial demonstrates how to set up the toolbar, URL links, image scaling and other parameters.
 
 {{< youtube id="hLMtsCWPOg8" >}}
 

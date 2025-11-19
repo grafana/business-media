@@ -17,7 +17,7 @@ This page contains clear, step-by-step video tutorials that showcase new feature
 
 ## Features overview of the Business Media 5.0.0
 
-This video is a detailed review of all configurable options. You will learn how to display images, video, audio and PDF files on your Grafana dashboard. She demonstrates how to set up the toolbar, URL links, image scaling and other parameters.
+This video is a detailed review of all configurable options. You will learn how to display images, video, audio and PDF files on your Grafana dashboard. The tutorial demonstrates how to set up the toolbar, URL links, image scaling and other parameters.
 
 {{< youtube id="hLMtsCWPOg8" >}}
 
