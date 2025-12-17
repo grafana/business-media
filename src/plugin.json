@@ -16,7 +16,11 @@
       {
         "name": "Documentation",
         "url": "https://grafana.com/docs/plugins/volkovlabs-image-panel/"
-      }  
+      },
+      {
+        "name": "Repository",
+        "url": "https://github.com/grafana/business-media/"
+      }
     ],
     "logos": {
       "large": "img/logo.svg",
