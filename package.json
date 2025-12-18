@@ -20,7 +20,7 @@
   "description": "Display Base64 encoded and URL media files",
   "devDependencies": {
     "@babel/core": "^7.28.0",
-    "@grafana/eslint-config": "^8.1.0",
+    "@grafana/eslint-config": "^9.0.0",
     "@grafana/plugin-e2e": "2.1.7",
     "@grafana/tsconfig": "^2.0.0",
     "@playwright/test": "^1.54.1",
