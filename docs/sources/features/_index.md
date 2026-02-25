@@ -14,9 +14,9 @@ weight: 40
 
 # Features
 
-The Business Media panel has the following features.
+The Business Media panel includes these features:
 
-| Section                        | Description                                         |
-| ------------------------------ | --------------------------------------------------- |
-| [Data sources](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/features/data-sources/) | Explains how to retrieve data from data sources.    |
-| [Variables](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/features/variables/)      | Explains how to use Dashboard and Global variables. |
+| Section | Description |
+| ------- | ----------- |
+| [Data sources](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/features/data-sources/) | How to retrieve data from data sources. |
+| [Variables](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/features/variables/) | How to use dashboard and global variables. |

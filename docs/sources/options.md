@@ -13,7 +13,7 @@ weight: 30
 
 # Options
 
-Below, you can find descriptions of all existing plugin options. The Business Media panel allows for the simultaneous displaying of multi-type media files. The three categories of options (**PDF**, **Image**, **Video/Audio**) are conditionally available depending on the added **Media Source Types** in the **Business Media** category.
+This section describes all plugin options. The Business Media panel displays multiple types of media files at once. The three option categories, **PDF**, **Image**, **Video/Audio**, appear based on the **Media Source Types** you add in the **Business Media** category.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/options.png" class="border" alt="All the Business Media panel options" >}}
 
@@ -24,7 +24,7 @@ The **Business Media** category has the following parameters:
 - **Type** to specify one of the four supported types. Select between Audio, Image, PDF, or Video.
 - **Field** to specify the data frame field name containing a base64 file to display on the panel.
 
-You can specify as many files as needed by using the **+Add** button.
+You can add as many files as you need by using the **+Add** button.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/opt-bm.png" class="border" alt="The parameters of the Business Media category" >}}
 
@@ -37,7 +37,7 @@ The **Text Options** category has the following parameters:
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/img-desc.png" class="border" alt="Image description illustration" >}}
 
 {{< admonition type="note" >}}
-Starting from release 5.0.0, you can customize a message displayed in case of image loading problems or no data found errors.
+Starting with release 5.0.0, you can customize the message shown for image loading problems or no data found errors.
 {{< /admonition >}}
 
 - **No Results Message** customizable message to notify users of loading problems or no data found errors.
@@ -46,18 +46,17 @@ Starting from release 5.0.0, you can customize a message displayed in case of im
 
 ## Toolbar
 
-The Business Media panel offers a powerful toolbar. By enabling the **Display toolbar** and specifying the desired **Features**, you can customize it to suit your needs.
+The Business Media panel includes a customizable toolbar. Enable **Display toolbar** and select the **Features** you want.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/toolbar.png" class="border" alt="The Toolbar section and available features" >}}
 
-- **Auto play**. Works when multiple media files are added. When a user clicks on the **Play** toolbar button, the images will switch from the first to the following with the specified **Auto play interval** until the last image.
-  If the **Auto Play infinity** is **Enabled**, then the switching starts again from the beginning automatically.
+- **Auto play**: When you add multiple media files, clicking the **Play** button switches images from the first to the last using the **Auto play interval**. If **Auto Play infinity** is **Enabled**, switching starts again from the beginning automatically.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/auto-switch.png" class="border" alt="The Toolbar feature - Auto Play" >}}
 
-- **Download**. Works for the **Image** type only. This enables a button that triggers the downloading of the selected image.
-- **Navigation**. This enables a set of buttons to page media files back and forward.
-- **Zoom**. Works for the **Image** type only. This option has two sub-options:
+- **Download**: For **Image** type only. Adds a button to download the selected image.
+- **Navigation**: Adds buttons to page media files back and forward.
+- **Zoom**: For **Image** type only. This option has two sub-options:
   - **Full Screen**. This enables one button that allows your image to be opened in full-screen mode.
   - **Pan and Pinch**. This enables three buttons to zoom in and out of your image.
 

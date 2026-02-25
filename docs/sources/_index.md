@@ -13,29 +13,29 @@ weight: 10
 
 # Business Media
 
-The Business Media panel is a Grafana plugin that renders PNG, JPG, GIF, MP4, WEBM, MP3, OGG, and PDF files encoded in the base64 format and URL.
+The Business Media panel is a Grafana plugin that renders PNG, JPG, GIF, MP4, WEBM, MP3, OGG, and PDF files encoded in base64 or as a URL.
 
-The panel offers great flexibility, allowing users to display multiple media files and flip through them. You can mix and match any supported formats for multi-media file visualizations, allowing you to create the desired visual experience.
+You can display multiple media files and flip through them. Mix and match any supported formats for multimedia visualizations. Create the visual experience you want.
 
 ## Requirements
 
-The Business Media panel version requirements for Grafana are as follows:
+The Business Media panel requires the following Grafana versions:
 
-- Business Media panel 7.X requires **Grafana 11** or **Grafana 12**.
-- Business Media panel 6.X requires **Grafana 10** or **Grafana 11**.
-- Business Media panel 5.X requires **Grafana 10** or **Grafana 11**.
-- Base64 Image/PDF panel 4.X requires **Grafana 9** or **Grafana 10**.
-- Base64 Image/PDF panel 3.X requires **Grafana 8.5** or **Grafana 9**.
-- Base64 Image/PDF panel 2.X requires **Grafana 8**.
-- Base64 Image/PDF panel 1.X requires **Grafana 7.1**.
+- Version 7.X: **Grafana 11** or **Grafana 12**
+- Version 6.X: **Grafana 10** or **Grafana 11**
+- Version 5.X: **Grafana 10** or **Grafana 11**
+- Base64 Image/PDF panel 4.X: **Grafana 9** or **Grafana 10**
+- Base64 Image/PDF panel 3.X: **Grafana 8.5** or **Grafana 9**
+- Base64 Image/PDF panel 2.X: **Grafana 8**
+- Base64 Image/PDF panel 1.X: **Grafana 7.1**
 
 ## Getting started
 
-The Business Media panel can be installed from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) or using the Grafana command line tool.
+Install the Business Media panel from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) or by using the Grafana command line tool.
 
 {{< youtube id="1qYzHfPXJF8" >}}
 
-For the latter, please use the following command.
+To install with the CLI, run:
 
 ```sh
 grafana cli plugins install volkovlabs-image-panel
@@ -43,13 +43,13 @@ grafana cli plugins install volkovlabs-image-panel
 
 ## Highlights
 
-- The media file can be specified in the base64 format or as a URL link.
-- Multiple media files display with pagination functionality.
-- The returned value can include base64 encoded content with or without a specified definition. The formats for the definition can look like `data:image/jpg;base64,ENCODED-CONTENT` or `data:application/pdf;base64,ENCODED-CONTENT`.
-- If the data source returns more than one field of the `string` type, you can select the Field Name in the panel's display options.
-- You can fit image dimensions to the panel size, keep the original values, or adjust dimensions based on the manually supplied values.
-- Allows adding a URL with a title to navigate to other dashboards when clicking the image. URL supports dashboard variables.
-- Provides a toolbar to download, zoom, and navigate between media files.
+- Specify the media file in base64 or as a URL.
+- Display multiple media files with pagination.
+- Return base64 content with or without a definition, such as `data:image/jpg;base64,ENCODED-CONTENT` or `data:application/pdf;base64,ENCODED-CONTENT`.
+- If the data source returns more than one `string` field, select the field name in the panel display options.
+- Fit image dimensions to the panel, keep original values, or set manual dimensions.
+- Add a URL with a title to navigate to other dashboards when clicking the image. URLs support dashboard variables.
+- Use the toolbar to download, zoom, and navigate between media files.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/media-7.png" class="border" alt="How to start with the Business Media panel" >}}
 
@@ -57,7 +57,7 @@ grafana cli plugins install volkovlabs-image-panel
 
 This tutorial explains all plugin options in version 5.0.0.
 
-You will learn how to display images, video, audio and PDF files on your Grafana dashboard. The tutorial demonstrates how to set up the toolbar, URL links, image scaling and other parameters.
+Learn how to display images, video, audio, and PDF files on your Grafana dashboard. The tutorial shows how to set up the toolbar, URL links, image scaling, and other parameters.
 
 {{< youtube id="hLMtsCWPOg8" >}}
 
