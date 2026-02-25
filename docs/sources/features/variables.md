@@ -27,8 +27,6 @@ The plugins used in the example are:
 - [The Business Variable panel](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) to provide a choice of what file to display.
 - [The Business Media panel](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) to display a selected file.
 
-Learn more in the File Upload using Grafana dashboard [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310).
-
-If you are a visual style learner, you can watch the video. It covers the same ground.
+Learn more in following video:
 
 {{< youtube id="V4Sza0uDQNs" >}}

@@ -63,6 +63,3 @@ CREATE TABLE audios (name text, audio bytea, UNIQUE(name));
 
 Load PDF, PNG, MP4, MP3, and other supported file formats into your database using [the Node.js script](https://github.com/grafana/business-media/blob/main/postgres/load.ts).
 
-## Websocket and MQTT
-
-[This blog post](https://volkovlabs.io/blog/streaming-images-business-media-20240903/) contains an example of effective collaboration between the Business Forms panel and two data sources (the Websocket and MQTT) to facilitate streaming images on your Grafana dashboard.
