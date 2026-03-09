@@ -15,20 +15,18 @@ labels:
 
 The Business Media panel supports dashboard and global variables in the `Image URL` panel option.
 
-These three types of variables are explained in the [Grafana Crash Course](https://volkovlabs.io/grafana/variables/).
+Learn about variable types in the [Grafana Crash Course](https://volkovlabs.io/grafana/variables/).
 
 ## Example of dashboard variable in the Base64 panel
 
-Below you can find an example of how a dashboard variable can be used to dynamically determine which file to display on the panel. The following blog post describes a project that integrates three open source plugins to solve the task of uploading a file into a database and then immediately showing what has been uploaded.
+Following is an example of using a dashboard variable to dynamically choose which file to display on the panel. The following blog post describes a project that integrates three open source plugins to upload a file into a database and immediately show what was uploaded.
 
 The plugins used in the example are:
 
-- [The Business Forms panel](https://grafana.com/grafana/plugins/volkovlabs-form-panel/) to provide with the File type element for file upload.
-- [The Business Variable panel](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) to provide a choice of what file to display.
-- [The Business Media panel](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) to display a selected file.
+- [Business Forms panel](https://grafana.com/grafana/plugins/volkovlabs-form-panel/) to provide the File type element for file upload.
+- [Business Variable panel](https://grafana.com/grafana/plugins/volkovlabs-variable-panel/) to let you choose which file to display.
+- [Business Media panel](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) to display the selected file.
 
-Learn more in the File Upload using Grafana dashboard [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310).
-
-If you are a visual style learner, you can watch the video. It covers the same ground.
+Learn more in the following video:
 
 {{< youtube id="V4Sza0uDQNs" >}}
