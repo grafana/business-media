@@ -26,6 +26,8 @@ and breaking changes for the Business Media plugin for Grafana.
 - Included LICENSE-original and NOTICES.md in webpack build output.
 - Fixed `react-hooks/set-state-in-effect` lint error in useMediaData hook.
 - Replaced deprecated `PageToolbar` with custom div-based toolbar.
+- Added missing `aria-label` to icon-only ToolbarButton components.
+- Fixed `RefObject` type for toolbar ref.
 
 ## [7.2.0] - Unreleased
 

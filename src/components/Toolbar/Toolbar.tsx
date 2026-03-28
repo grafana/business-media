@@ -75,7 +75,7 @@ interface Props {
    *
    * @type {RefObject<HTMLDivElement>}
    */
-  toolbarRef: RefObject<HTMLDivElement | null>;
+  toolbarRef: RefObject<HTMLDivElement>;
 }
 
 /**
@@ -308,6 +308,7 @@ export const Toolbar: React.FC<Props> = ({
         <ToolbarButton
           key="zoom"
           icon="search-plus"
+          aria-label="Zoom"
           onClick={() => {
             setIsZoomed(true);
           }}
@@ -325,18 +326,21 @@ export const Toolbar: React.FC<Props> = ({
         <ToolbarButton
           key="zoom-in"
           icon="search-plus"
+          aria-label="Zoom in"
           onClick={onZoomPanPinchIn}
           data-testid={TEST_IDS.panel.buttonZoomPanPinchIn}
         />,
         <ToolbarButton
           key="zoom-out"
           icon="search-minus"
+          aria-label="Zoom out"
           onClick={onZoomPanPinchOut}
           data-testid={TEST_IDS.panel.buttonZoomPanPinchOut}
         />,
         <ToolbarButton
           key="zoom-reset"
           icon="times-circle"
+          aria-label="Reset zoom"
           onClick={onResetZoomPanPinch}
           data-testid={TEST_IDS.panel.buttonZoomPanPinchReset}
         />
