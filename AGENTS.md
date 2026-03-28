@@ -9,7 +9,7 @@ media files (images, video, audio, PDF) in Grafana dashboards.
 - **Plugin type:** `panel`
 - **Owner:** `@grafana/dataviz-squad`
 - **Node version:** 24 (see `.nvmrc`)
-- **Grafana dependency:** `>=11.0.0`
+- **Grafana dependency:** `>=12.0.0`
 
 ## Critical Rules
 

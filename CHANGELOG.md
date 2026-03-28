@@ -28,6 +28,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - Replaced deprecated `PageToolbar` with custom div-based toolbar.
 - Added missing `aria-label` to icon-only ToolbarButton components.
 - Fixed `RefObject` type for toolbar ref.
+- Bumped `grafanaDependency` to `>=12.0.0`.
 
 ## [7.2.0] - Unreleased
 
