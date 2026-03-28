@@ -25,6 +25,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - Reformatted markdown files to fit within 120-character line limit.
 - Included LICENSE-original and NOTICES.md in webpack build output.
 - Fixed `react-hooks/set-state-in-effect` lint error in useMediaData hook.
+- Replaced deprecated `PageToolbar` with custom div-based toolbar.
 
 ## [7.2.0] - Unreleased
 
