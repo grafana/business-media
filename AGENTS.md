@@ -32,6 +32,8 @@ media files (images, video, audio, PDF) in Grafana dashboards.
   "**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
   and fix any issues before committing. Add new words
   to `cspell.config.json` if they are legitimate.
+- **Always update `CHANGELOG.md`** when committing any
+  change. Include the changelog update in the same commit.
 - **NEVER commit unless the user explicitly asks.**
   Do not commit as part of completing a task.
 - **NEVER push unless the user explicitly asks.**
