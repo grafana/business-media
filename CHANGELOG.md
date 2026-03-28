@@ -24,6 +24,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - Upgraded uuid to v13 and removed @types/uuid.
 - Reformatted markdown files to fit within 120-character line limit.
 - Included LICENSE-original and NOTICES.md in webpack build output.
+- Fixed `react-hooks/set-state-in-effect` lint error in useMediaData hook.
 
 ## [7.2.0] - Unreleased
 

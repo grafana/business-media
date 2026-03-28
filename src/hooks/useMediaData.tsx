@@ -1,9 +1,15 @@
 import { LoadingState, PanelData, TimeRange } from '@grafana/data';
 import { Base64 } from 'js-base64';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { ButtonType, PanelOptions } from '../types';
 import { getDataLink, getMediaValue, getValuesForMultiSeries, handleMediaData } from '../utils';
+
+/**
+ * Check if data has a completed loading state
+ */
+const isDataReady = (data: PanelData): boolean =>
+  !data.state || [LoadingState.Done, LoadingState.Streaming].includes(data.state);
 
 /**
  * Use media data hook
@@ -20,27 +26,16 @@ export const useMediaData = ({
   timeRange: TimeRange;
 }) => {
   /**
-   * Initial data
+   * Track the last data with a completed loading state.
+   * Uses state initializer and updater to avoid setState in effects.
    */
-  const [currentData, setCurrentData] = useState<PanelData>({
-    state: LoadingState.Loading,
-    series: [],
-    timeRange: timeRange,
-  });
+  const [currentData, setCurrentData] = useState<PanelData>(() =>
+    isDataReady(data) ? data : { state: LoadingState.Loading, series: [], timeRange }
+  );
 
-  /**
-   * Handle data
-   */
-  useEffect(() => {
-    /**
-     * Wait until Data Source return results
-     */
-    if (data.state && ![LoadingState.Done, LoadingState.Streaming].includes(data.state)) {
-      return;
-    }
-
+  if (isDataReady(data) && data !== currentData) {
     setCurrentData(data);
-  }, [data]);
+  }
 
   /**
    * Is Navigation Shown
