@@ -17,6 +17,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Upgraded 15 minor/patch dependencies.
 - Restored ResizeObserver and IntersectionObserver mocks in jest-setup.js.
 - Updated Playwright Docker image to v1.58.2-noble.
+- Pinned CI/CD workflows to ci-cd-workflows/v7.0.
+- Upgraded @grafana/data, runtime, ui to 12.4.2.
+- Upgraded uuid to v13 and removed @types/uuid.
 
 ## [7.2.0] - Unreleased
 
