@@ -9,6 +9,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Project Updates
 
 - Grafana Labs fork.
+- Added `AGENTS.md` with build commands, code style guidelines, and critical rules for AI coding agents.
+- Added `cspell.config.json` for spell checking with project-specific dictionary.
+- Added `.markdownlint.yaml` with 120-character line length limit.
 
 ## [7.2.0] - Unreleased
 
