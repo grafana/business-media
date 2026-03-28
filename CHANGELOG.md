@@ -30,6 +30,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - Fixed `RefObject` type for toolbar ref.
 - Bumped `grafanaDependency` to `>=12.0.0`.
 - Updated `docker-compose.yaml` with dev, main, and playwright profiles.
+- Enabled Playwright tests against Grafana dev image in CI.
 
 ## [7.2.0] - Unreleased
 
