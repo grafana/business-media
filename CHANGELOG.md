@@ -29,6 +29,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - Added missing `aria-label` to icon-only ToolbarButton components.
 - Fixed `RefObject` type for toolbar ref.
 - Bumped `grafanaDependency` to `>=12.0.0`.
+- Updated `docker-compose.yaml` with dev, main, and playwright profiles.
 
 ## [7.2.0] - Unreleased
 
