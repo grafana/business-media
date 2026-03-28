@@ -14,6 +14,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Added `.markdownlint.yaml` with 120-character line length limit.
 - Updated Node version from 20 to 24.
 - Updated Grafana plugin tooling and dependencies.
+- Upgraded 15 minor/patch dependencies.
+- Restored ResizeObserver and IntersectionObserver mocks in jest-setup.js.
+- Updated Playwright Docker image to v1.58.2-noble.
 
 ## [7.2.0] - Unreleased
 
