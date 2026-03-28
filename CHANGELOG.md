@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this changelog is maintained to provide a clear history of updates, features, and breaking changes for the Business Media plugin for Grafana.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this changelog is maintained to provide a clear history of updates, features,
+and breaking changes for the Business Media plugin for Grafana.
 
 ## [7.3.0] - 2025-10-27
 
@@ -20,6 +22,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Pinned CI/CD workflows to ci-cd-workflows/v7.0.
 - Upgraded @grafana/data, runtime, ui to 12.4.2.
 - Upgraded uuid to v13 and removed @types/uuid.
+- Reformatted markdown files to fit within 120-character line limit.
+- Included LICENSE-original and NOTICES.md in webpack build output.
 
 ## [7.2.0] - Unreleased
 
@@ -92,8 +96,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Updated video overview documentation ([#100](https://github.com/volkovlabs/business-media/pull/100)).
-- Added plugin E2E tests and removed Cypress dependency ([#101](https://github.com/volkovlabs/business-media/pull/101), [#102](https://github.com/volkovlabs/business-media/pull/102), [#103](https://github.com/volkovlabs/business-media/pull/103), [#105](https://github.com/volkovlabs/business-media/pull/105)).
-- Added support for loading images and videos from URLs, along with a video toolbar ([#111](https://github.com/volkovlabs/business-media/pull/111), [#116](https://github.com/volkovlabs/business-media/pull/116)).
+- Added plugin E2E tests and removed Cypress dependency
+  ([#101](https://github.com/volkovlabs/business-media/pull/101),
+  [#102](https://github.com/volkovlabs/business-media/pull/102),
+  [#103](https://github.com/volkovlabs/business-media/pull/103),
+  [#105](https://github.com/volkovlabs/business-media/pull/105)).
+- Added support for loading images and videos from URLs, along with a video toolbar
+  ([#111](https://github.com/volkovlabs/business-media/pull/111),
+  [#116](https://github.com/volkovlabs/business-media/pull/116)).
 - Updated dependencies to support Grafana 11 ([#114](https://github.com/volkovlabs/business-media/pull/114)).
 - Updated to use frame utilities from packages ([#115](https://github.com/volkovlabs/business-media/pull/115)).
 - Improved E2E workflow using Docker ([#117](https://github.com/volkovlabs/business-media/pull/117)).
@@ -149,7 +159,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Migrated to Plugin Tools 1.5.2 and updated to Node 18 ([#72](https://github.com/volkovlabs/business-media/pull/72), [#73](https://github.com/volkovlabs/business-media/pull/73)).
 - Increased test coverage for better reliability ([#72](https://github.com/volkovlabs/business-media/pull/72)).
 - Tested compatibility with Grafana 10 Preview ([#74](https://github.com/volkovlabs/business-media/pull/74)).
-- Added toolbar for downloading, zooming, and navigating between images ([#75](https://github.com/volkovlabs/business-media/pull/75), [#76](https://github.com/volkovlabs/business-media/pull/76), [#77](https://github.com/volkovlabs/business-media/pull/77)).
+- Added toolbar for downloading, zooming, and navigating between images
+  ([#75](https://github.com/volkovlabs/business-media/pull/75),
+  [#76](https://github.com/volkovlabs/business-media/pull/76),
+  [#77](https://github.com/volkovlabs/business-media/pull/77)).
 
 ## [3.5.0] - 2023-03-07
 
@@ -238,7 +251,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Added `display:block` to properly display href links ([Grafana Issue #41445](https://github.com/grafana/grafana/issues/41445)) ([#21](https://github.com/volkovlabs/business-media/pull/21)).
+- Added `display:block` to properly display href links
+  ([Grafana Issue #41445](https://github.com/grafana/grafana/issues/41445))
+  ([#21](https://github.com/volkovlabs/business-media/pull/21)).
 
 ## [2.3.0] - 2021-11-08
 
