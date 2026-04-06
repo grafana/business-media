@@ -16,6 +16,8 @@ and breaking changes for the Business Media plugin for Grafana.
   and `playwright` services.
 - Removed redundant `server` script from `package.json`; replaced with
   profile-based `start`, `start:dev`, and `start:main` scripts.
+- Consolidated `stop:dev`, `stop:main`, and `stop:e2e` into a single
+  `stop` script since `docker compose down` stops all profiles.
 
 ## [7.3.0] - 2025-10-27
 
