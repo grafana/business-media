@@ -9,6 +9,9 @@ services:
       GF_DEFAULT_APP_MODE: development
       GF_USERS_DEFAULT_THEME: light
       GF_PLUGINS_PREINSTALL: marcusolsson-static-datasource,golioth-websocket-datasource,yesoreyeram-infinity-datasource
+    depends_on:
+      pdf-loader:
+        condition: service_completed_successfully
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
       interval: 5s
@@ -91,8 +94,7 @@ services:
     profiles:
       - main
 
-  # playwright depends on 'grafana' and 'pdf-loader' via depends_on.
-  # Docker Compose starts them automatically even though playwright is profiled.
+  # playwright depends on grafana, which chains to pdf-loader and postgres.
   playwright:
     build:
       context: .
@@ -105,7 +107,5 @@ services:
     depends_on:
       grafana:
         condition: service_healthy
-      pdf-loader:
-        condition: service_completed_successfully
     profiles:
       - playwright

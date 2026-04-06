@@ -43,6 +43,8 @@ and breaking changes for the Business Media plugin for Grafana.
 - Removed profiles from `grafana`, `postgres`, and `pdf-loader` so
   `docker compose up` works without a profile flag. Dev/main scripts
   name services explicitly to avoid port conflicts.
+- Added `depends_on: pdf-loader` to `grafana` service so test data is
+  loaded before Grafana starts. Simplified playwright dependency chain.
 
 ## [7.3.0] - 2025-10-27
 
