@@ -13,6 +13,10 @@ media files (images, video, audio, PDF) in Grafana dashboards.
 
 ## Critical Rules
 
+- **Do not use `volkovlabs.io` URLs** anywhere in the
+  codebase. This project was forked from Volkov Labs
+  and all references should point to Grafana equivalents
+  (e.g., `grafana.com`).
 - **Never modify anything inside `.config/`** —
   managed by Grafana plugin tooling.
 - **Never change `id` or `type`** in `src/plugin.json`.
@@ -27,6 +31,8 @@ media files (images, video, audio, PDF) in Grafana dashboards.
   file you create or modify (including `AGENTS.md`,
   `README.md`, `CHANGELOG.md`) and fix all reported
   issues before committing.
+- **Always run `npm run typecheck`** when `src/` files
+  are changed and fix any type errors before committing.
 - **Always run cspell** after making changes:
   `npx cspell@6.13.3 -c cspell.config.json
   "**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
@@ -38,6 +44,16 @@ media files (images, video, audio, PDF) in Grafana dashboards.
   Do not commit as part of completing a task.
 - **NEVER push unless the user explicitly asks.**
   Do not push as part of completing a task.
+  Never chain `git commit && git push` in one command.
+  Always wait for the user to explicitly ask to push.
+- **After pushing, always update the PR summary** if a
+  PR exists for the current branch. Treat push and PR
+  update as an atomic pair — never stop between them.
+  Use `gh pr edit` to update the title and body with
+  well-formatted text that reflects all changes across
+  the entire branch. **Wrap PR summary lines at 120
+  characters** — use the full width, do not wrap
+  shorter than necessary.
 - **Prefer subagents** for research, code exploration,
   and multi-step work. Use the Task tool with
   `explore` or `general` agents rather than running
@@ -216,6 +232,13 @@ import { ImageSizeMode, MediaFormat, PanelOptions } from '../../types';
 
 - Use `@volkovlabs/jest-selectors` (`getJestSelectors`) for editor tests.
 
+### CI/CD
+
+- **CI** (`.github/workflows/ci.yml`): Runs on push to `main` and all PRs. Lints, tests, builds, signs, and uploads artifacts.
+- **E2E** (`.github/workflows/e2e.yml`): End-to-end Playwright tests.
+- **Release** (`.github/workflows/release.yml`): Release workflow.
+- The `.config/` directory is **scaffolded by Grafana** — do not edit files in it.
+
 ### ESLint
 
 Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`,
@@ -246,3 +269,11 @@ before pushing.
   changes.
 - **Always create pull requests as drafts**
   (`gh pr create --draft`).
+
+## Important
+
+Always create a branch before making any changes. Never commit directly to `main`.
+
+Do not add a `Co-Authored-By` line to commit messages.
+
+When checking out a branch or `main`, always `git fetch` and `git pull` to ensure you have the latest changes.
