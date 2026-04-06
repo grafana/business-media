@@ -54,6 +54,9 @@ media files (images, video, audio, PDF) in Grafana dashboards.
   the entire branch. **Wrap PR summary lines at 120
   characters** — use the full width, do not wrap
   shorter than necessary.
+- **Never add "Generated with Claude" or similar
+  attribution lines** to PR summaries, commit messages,
+  or any other output.
 - **Prefer subagents** for research, code exploration,
   and multi-step work. Use the Task tool with
   `explore` or `general` agents rather than running
