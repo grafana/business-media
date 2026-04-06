@@ -29,6 +29,8 @@ and breaking changes for the Business Media plugin for Grafana.
 - Updated AGENTS.md with `start:dev:update` and update script docs.
 - Added rule to AGENTS.md: never add AI attribution lines to PR summaries
   or commit messages.
+- Added rule to AGENTS.md: PR summaries must use categories to organize
+  changes.
 
 ## [7.3.0] - 2025-10-27
 

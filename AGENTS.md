@@ -54,6 +54,12 @@ media files (images, video, audio, PDF) in Grafana dashboards.
   the entire branch. **Wrap PR summary lines at 120
   characters** — use the full width, do not wrap
   shorter than necessary.
+- **PR summaries must use categories** to organize
+  changes. Group bullet points under headings like
+  `### Added`, `### Fixed`, `### Changed`,
+  `### Removed`, `### Dependencies`, `### CI/CD`,
+  `### Documentation`, etc. Always include a
+  `## Test plan` section with a checklist.
 - **Never add "Generated with Claude" or similar
   attribution lines** to PR summaries, commit messages,
   or any other output.
