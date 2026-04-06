@@ -285,12 +285,13 @@ export const Toolbar: React.FC<Props> = ({
     const buttons: ReactNode[] = [];
 
     if (options.buttons.includes(ButtonType.DOWNLOAD) && mediaSource.type === MediaFormat.IMAGE && mediaSource.url) {
+      const downloadUrl = mediaSource.url;
       buttons.push(
         <ToolbarButton
           key="download"
           icon="save"
           onClick={() => {
-            saveAs(mediaSource.url);
+            saveAs(downloadUrl);
           }}
           data-testid={TEST_IDS.panel.buttonDownload}
         >
