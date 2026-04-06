@@ -6,14 +6,14 @@ set -euo pipefail
 REPO="grafana/grafana-enterprise-dev"
 API_URL="https://hub.docker.com/v2/repositories/${REPO}/tags/?page_size=10&ordering=last_updated"
 
-# Fetch the latest non-ubuntu, non-boringcrypto tag (plain commit hash)
+# Fetch the latest plain commit-hash tag (hex-only, no suffix like -ubuntu or -boringcrypto)
 TAG=$(curl -sf "$API_URL" \
   | python3 -c "
-import sys, json
+import sys, json, re
 data = json.load(sys.stdin)
 for t in data['results']:
     name = t['name']
-    if '-' not in name and len(name) == 8:
+    if re.fullmatch(r'[0-9a-f]{7,12}', name):
         print(name)
         break
 ")

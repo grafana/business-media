@@ -37,6 +37,9 @@ and breaking changes for the Business Media plugin for Grafana.
 - Fixed `sed -i` portability in `update-grafana-dev.sh` for Linux.
 - Removed `playwright` from `default` profile so `npm start` no longer
   spins up the Playwright container.
+- Improved tag filtering in `update-grafana-dev.sh` to use hex regex
+  instead of length check.
+- Added comment clarifying playwright service depends_on behavior.
 
 ## [7.3.0] - 2025-10-27
 

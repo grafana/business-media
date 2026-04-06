@@ -103,6 +103,8 @@ services:
     profiles:
       - main
 
+  # playwright depends on the 'grafana' service (default profile).
+  # Docker Compose pulls in 'grafana' via depends_on regardless of profile.
   playwright:
     build:
       context: .
