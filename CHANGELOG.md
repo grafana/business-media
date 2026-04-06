@@ -24,10 +24,15 @@ and breaking changes for the Business Media plugin for Grafana.
 - Upgraded uuid to v13 and removed @types/uuid.
 - Reformatted markdown files to fit within 120-character line limit.
 - Included LICENSE-original and NOTICES.md in webpack build output.
-- Fixed `react-hooks/set-state-in-effect` lint error in useMediaData hook.
+- Fixed `react-hooks/set-state-in-effect` lint error in useMediaData hook by replacing `useState`
+  with `useRef` to avoid extra render cycles.
 - Replaced deprecated `PageToolbar` with custom div-based toolbar.
 - Added missing `aria-label` to icon-only ToolbarButton components.
 - Fixed `RefObject` type for toolbar ref.
+- Added `mediaSource.url` guard to download button, removing unsafe non-null assertion.
+- Only render navigation container when navigation button type is enabled.
+- Fixed broken `stop:e2e` script to use `--profile playwright`.
+- Restored `--coverage` flag in `test:ci` script.
 - Bumped `grafanaDependency` to `>=12.0.0`.
 - Updated `docker-compose.yaml` with dev, main, and playwright profiles.
 - Enabled Playwright tests against Grafana dev image in CI.
