@@ -118,5 +118,4 @@ services:
       pdf-loader:
         condition: service_completed_successfully
     profiles:
-      - default
       - playwright

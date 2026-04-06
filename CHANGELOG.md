@@ -35,6 +35,8 @@ and breaking changes for the Business Media plugin for Grafana.
   service to avoid conflict with `grafana-main` which uses
   `GRAFANA_VERSION` for branch-based tags.
 - Fixed `sed -i` portability in `update-grafana-dev.sh` for Linux.
+- Removed `playwright` from `default` profile so `npm start` no longer
+  spins up the Playwright container.
 
 ## [7.3.0] - 2025-10-27
 
