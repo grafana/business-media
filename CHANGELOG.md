@@ -24,8 +24,8 @@ and breaking changes for the Business Media plugin for Grafana.
 - Upgraded uuid to v13 and removed @types/uuid.
 - Reformatted markdown files to fit within 120-character line limit.
 - Included LICENSE-original and NOTICES.md in webpack build output.
-- Fixed `react-hooks/set-state-in-effect` lint error in useMediaData hook by replacing `useState`
-  with `useRef` to avoid extra render cycles.
+- Fixed `react-hooks/set-state-in-effect` lint error in useMediaData hook by replacing
+  `useEffect` + `setState` with a set-state-during-render pattern.
 - Replaced deprecated `PageToolbar` with custom div-based toolbar.
 - Added missing `aria-label` to icon-only ToolbarButton components.
 - Fixed `RefObject` type for toolbar ref.

@@ -34,7 +34,7 @@ media files (images, video, audio, PDF) in Grafana dashboards.
 - **Always run `npm run typecheck`** when `src/` files
   are changed and fix any type errors before committing.
 - **Always run cspell** after making changes:
-  `npx cspell@6.13.3 -c cspell.config.json
+  `npx cspell -c cspell.config.json
   "**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
   and fix any issues before committing. Add new words
   to `cspell.config.json` if they are legitimate.
@@ -234,9 +234,8 @@ import { ImageSizeMode, MediaFormat, PanelOptions } from '../../types';
 
 ### CI/CD
 
-- **CI** (`.github/workflows/ci.yml`): Runs on push to `main` and all PRs. Lints, tests, builds, signs, and uploads artifacts.
-- **E2E** (`.github/workflows/e2e.yml`): End-to-end Playwright tests.
-- **Release** (`.github/workflows/release.yml`): Release workflow.
+- **CI** (`.github/workflows/push.yml`): Runs on push to `main` and all PRs. Lints, tests, builds, signs, and uploads artifacts.
+- **CD** (`.github/workflows/publish.yml`): Release and publish workflow.
 - The `.config/` directory is **scaffolded by Grafana** — do not edit files in it.
 
 ### ESLint
