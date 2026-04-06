@@ -1,6 +1,6 @@
 import { LoadingState, PanelData, TimeRange } from '@grafana/data';
 import { Base64 } from 'js-base64';
-import { useMemo, useRef } from 'react';
+import { useMemo, useState } from 'react';
 
 import { ButtonType, PanelOptions } from '../types';
 import { getDataLink, getMediaValue, getValuesForMultiSeries, handleMediaData } from '../utils';
@@ -27,18 +27,14 @@ export const useMediaData = ({
 }) => {
   /**
    * Track the last data with a completed loading state.
-   * Uses a ref so updating it doesn't schedule an extra render —
-   * the component already re-renders when the `data` prop changes.
    */
-  const currentDataRef = useRef<PanelData>(
+  const [currentData, setCurrentData] = useState<PanelData>(
     isDataReady(data) ? data : { state: LoadingState.Loading, series: [], timeRange }
   );
 
-  if (isDataReady(data)) {
-    currentDataRef.current = data;
+  if (isDataReady(data) && data !== currentData) {
+    setCurrentData(data);
   }
-
-  const currentData = currentDataRef.current;
 
   /**
    * Is Navigation Shown
