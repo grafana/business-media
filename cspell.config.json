@@ -3,6 +3,7 @@
   "language": "en",
   "words": [
     "autoplay",
+    "boringcrypto",
     "bytea",
     "datasource",
     "dataviz",
@@ -18,6 +19,7 @@
     "initdb",
     "isready",
     "jsdom",
+    "jscoverage",
     "jsonplaceholder",
     "jvbe",
     "levitate",
@@ -25,6 +27,7 @@
     "markdownlint",
     "nopadding",
     "pangea",
+    "pids",
     "panpinch",
     "pexels",
     "playwright",

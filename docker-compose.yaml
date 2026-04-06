@@ -61,7 +61,8 @@ services:
     build:
       context: .config
       args:
-        grafana_version: ${GRAFANA_VERSION:-main}
+        grafana_image: ${GRAFANA_IMAGE:-grafana-enterprise-dev}
+        grafana_version: ${GRAFANA_VERSION:-6711104e}
         development: "true"
     ports:
       - 3000:3000/tcp

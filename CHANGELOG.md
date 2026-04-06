@@ -20,6 +20,12 @@ and breaking changes for the Business Media plugin for Grafana.
   `stop` script since `docker compose down` stops all profiles.
 - Updated AGENTS.md build commands to document `start:dev`, `start:main`,
   and `stop` scripts.
+- Switched `grafana-dev` service to `grafana-enterprise-dev` image with
+  auto-update script (`scripts/update-grafana-dev.sh`) that fetches the
+  latest tag from Docker Hub and writes it to `.env`.
+- Added `start:dev:update` npm script to fetch latest dev image before
+  starting.
+- Added `.env` to `.gitignore`.
 
 ## [7.3.0] - 2025-10-27
 
