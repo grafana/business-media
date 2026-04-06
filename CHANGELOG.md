@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this changelog is maintained to provide a clear history of updates, features,
 and breaking changes for the Business Media plugin for Grafana.
 
+## [Unreleased]
+
+### Fixed
+
+- Fixed docker-compose build args for `grafana-dev` and `grafana-main` to pass
+  `grafana_version` and `development` at build time.
+- Added missing `default` profile to `grafana`, `postgres`, `pdf-loader`,
+  and `playwright` services.
+- Removed redundant `server` script from `package.json`; replaced with
+  profile-based `start`, `start:dev`, and `start:main` scripts.
+
 ## [7.3.0] - 2025-10-27
 
 ### Project Updates

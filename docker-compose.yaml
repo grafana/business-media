@@ -15,6 +15,8 @@ services:
       timeout: 5s
       retries: 10
       start_period: 30s
+    profiles:
+      - default
 
   postgres:
     image: postgres
@@ -32,6 +34,7 @@ services:
     volumes:
       - ./postgres:/docker-entrypoint-initdb.d
     profiles:
+      - default
       - dev
       - main
       - playwright
@@ -46,35 +49,56 @@ services:
       postgres:
         condition: service_healthy
     profiles:
+      - default
       - dev
       - main
       - playwright
 
   grafana-dev:
-    image: ghcr.io/volkovlabs/app:latest
+    extends:
+      file: .config/docker-compose-base.yaml
+      service: grafana
+    build:
+      context: .config
+      args:
+        grafana_version: ${GRAFANA_VERSION:-main}
+        development: "true"
     ports:
       - 3000:3000/tcp
     environment:
       GF_DEFAULT_APP_MODE: development
       GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /etc/grafana/provisioning/dashboards/panels.json
       GF_PLUGINS_PREINSTALL: marcusolsson-static-datasource,golioth-websocket-datasource,yesoreyeram-infinity-datasource
-    volumes:
-      - ./dist:/var/lib/grafana/plugins/volkovlabs-image-panel
-      - ./provisioning:/etc/grafana/provisioning
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
     profiles:
       - dev
 
   grafana-main:
-    image: grafana/grafana:main
+    extends:
+      file: .config/docker-compose-base.yaml
+      service: grafana
+    build:
+      context: .config
+      args:
+        grafana_version: ${GRAFANA_VERSION:-main}
+        development: "true"
     ports:
       - 3000:3000/tcp
     environment:
       GF_DEFAULT_APP_MODE: development
       GF_USERS_DEFAULT_THEME: light
       GF_PLUGINS_PREINSTALL: marcusolsson-static-datasource,golioth-websocket-datasource,yesoreyeram-infinity-datasource
-    volumes:
-      - ./dist:/var/lib/grafana/plugins/volkovlabs-image-panel
-      - ./provisioning:/etc/grafana/provisioning
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
     profiles:
       - main
 
@@ -93,4 +117,5 @@ services:
       pdf-loader:
         condition: service_completed_successfully
     profiles:
+      - default
       - playwright
