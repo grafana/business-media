@@ -26,6 +26,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - Added `start:dev:update` npm script to fetch latest dev image before
   starting.
 - Added `.env` to `.gitignore`.
+- Updated AGENTS.md with `start:dev:update` and update script docs.
 
 ## [7.3.0] - 2025-10-27
 

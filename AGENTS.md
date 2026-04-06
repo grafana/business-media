@@ -73,12 +73,16 @@ npm run build
 npm run dev
 
 # Start local Grafana with plugin (Docker)
-npm start            # default profile (grafana-enterprise:12.4.0)
-npm run start:dev    # dev profile (grafana-enterprise:main, dev tools)
-npm run start:main   # main profile (grafana-enterprise:main)
+npm start                # default profile (grafana-enterprise:12.4.0)
+npm run start:dev        # dev profile (grafana-enterprise-dev)
+npm run start:dev:update # dev profile — fetch latest image tag first
+npm run start:main       # main profile (grafana-enterprise:main)
 
 # Stop all running containers
 npm run stop
+
+# Update grafana-enterprise-dev tag in .env (auto-fetches from Docker Hub)
+bash scripts/update-grafana-dev.sh
 
 # Type-check without emitting
 npm run typecheck
