@@ -40,6 +40,9 @@ and breaking changes for the Business Media plugin for Grafana.
 - Improved tag filtering in `update-grafana-dev.sh` to use hex regex
   instead of length check.
 - Added comment clarifying playwright service depends_on behavior.
+- Removed profiles from `grafana`, `postgres`, and `pdf-loader` so
+  `docker compose up` works without a profile flag. Dev/main scripts
+  name services explicitly to avoid port conflicts.
 
 ## [7.3.0] - 2025-10-27
 
