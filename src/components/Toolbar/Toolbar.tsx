@@ -284,13 +284,13 @@ export const Toolbar: React.FC<Props> = ({
   const getRightButtons = () => {
     const buttons: ReactNode[] = [];
 
-    if (options.buttons.includes(ButtonType.DOWNLOAD) && mediaSource.type === MediaFormat.IMAGE) {
+    if (options.buttons.includes(ButtonType.DOWNLOAD) && mediaSource.type === MediaFormat.IMAGE && mediaSource.url) {
       buttons.push(
         <ToolbarButton
           key="download"
           icon="save"
           onClick={() => {
-            saveAs(mediaSource.url!);
+            saveAs(mediaSource.url);
           }}
           data-testid={TEST_IDS.panel.buttonDownload}
         >
@@ -353,7 +353,9 @@ export const Toolbar: React.FC<Props> = ({
   return (
     <>
       <div ref={toolbarRef} className={styles.toolbar}>
-        <div className={styles.leftItems}>{getToolbarLeftButtons()}</div>
+        {options.buttons.includes(ButtonType.NAVIGATION) && (
+          <div className={styles.leftItems}>{getToolbarLeftButtons()}</div>
+        )}
         <div className={styles.rightItems}>{getRightButtons()}</div>
       </div>
       {options.buttons.includes(ButtonType.ZOOM) && mediaSource.type === MediaFormat.IMAGE
