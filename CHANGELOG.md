@@ -31,6 +31,10 @@ and breaking changes for the Business Media plugin for Grafana.
   or commit messages.
 - Added rule to AGENTS.md: PR summaries must use categories to organize
   changes.
+- Renamed `GRAFANA_VERSION` to `GRAFANA_DEV_VERSION` for `grafana-dev`
+  service to avoid conflict with `grafana-main` which uses
+  `GRAFANA_VERSION` for branch-based tags.
+- Fixed `sed -i` portability in `update-grafana-dev.sh` for Linux.
 
 ## [7.3.0] - 2025-10-27
 

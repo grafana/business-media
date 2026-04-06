@@ -25,11 +25,15 @@ fi
 
 ENV_FILE="$(cd "$(dirname "$0")/.." && pwd)/.env"
 
-# Update or create GRAFANA_VERSION in .env
-if [ -f "$ENV_FILE" ] && grep -q '^GRAFANA_VERSION=' "$ENV_FILE"; then
-  sed -i '' "s/^GRAFANA_VERSION=.*/GRAFANA_VERSION=${TAG}/" "$ENV_FILE"
+# Update or create GRAFANA_DEV_VERSION in .env
+if [ -f "$ENV_FILE" ] && grep -q '^GRAFANA_DEV_VERSION=' "$ENV_FILE"; then
+  if [[ "$OSTYPE" == darwin* ]]; then
+    sed -i '' "s/^GRAFANA_DEV_VERSION=.*/GRAFANA_DEV_VERSION=${TAG}/" "$ENV_FILE"
+  else
+    sed -i "s/^GRAFANA_DEV_VERSION=.*/GRAFANA_DEV_VERSION=${TAG}/" "$ENV_FILE"
+  fi
 else
-  echo "GRAFANA_VERSION=${TAG}" >> "$ENV_FILE"
+  echo "GRAFANA_DEV_VERSION=${TAG}" >> "$ENV_FILE"
 fi
 
-echo "Updated GRAFANA_VERSION to ${TAG} in .env"
+echo "Updated GRAFANA_DEV_VERSION to ${TAG} in .env"
