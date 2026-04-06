@@ -73,7 +73,12 @@ npm run build
 npm run dev
 
 # Start local Grafana with plugin (Docker)
-npm start
+npm start            # default profile (grafana-enterprise:12.4.0)
+npm run start:dev    # dev profile (grafana-enterprise:main, dev tools)
+npm run start:main   # main profile (grafana-enterprise:main)
+
+# Stop all running containers
+npm run stop
 
 # Type-check without emitting
 npm run typecheck

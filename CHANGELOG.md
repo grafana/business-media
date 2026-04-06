@@ -18,6 +18,8 @@ and breaking changes for the Business Media plugin for Grafana.
   profile-based `start`, `start:dev`, and `start:main` scripts.
 - Consolidated `stop:dev`, `stop:main`, and `stop:e2e` into a single
   `stop` script since `docker compose down` stops all profiles.
+- Updated AGENTS.md build commands to document `start:dev`, `start:main`,
+  and `stop` scripts.
 
 ## [7.3.0] - 2025-10-27
 
