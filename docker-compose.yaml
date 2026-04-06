@@ -9,9 +9,6 @@ services:
       GF_DEFAULT_APP_MODE: development
       GF_USERS_DEFAULT_THEME: light
       GF_PLUGINS_PREINSTALL: marcusolsson-static-datasource,golioth-websocket-datasource,yesoreyeram-infinity-datasource
-    depends_on:
-      pdf-loader:
-        condition: service_completed_successfully
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
       interval: 5s
@@ -19,8 +16,6 @@ services:
       retries: 10
       start_period: 30s
 
-  # postgres and pdf-loader use profiles so they only start via depends_on,
-  # never as standalone tracked services (prevents exit-code issues in CI).
   postgres:
     image: postgres
     restart: always
@@ -36,9 +31,9 @@ services:
       - 5432:5432
     volumes:
       - ./postgres:/docker-entrypoint-initdb.d
-    profiles:
-      - infra
 
+  # pdf-loader is profiled so CI's second compose call doesn't recreate it.
+  # Start it by name locally or via the playwright profile in CI.
   pdf-loader:
     build: ./postgres
     environment:
@@ -49,7 +44,7 @@ services:
       postgres:
         condition: service_healthy
     profiles:
-      - infra
+      - playwright
 
   grafana-dev:
     extends:
@@ -100,7 +95,6 @@ services:
     profiles:
       - main
 
-  # playwright depends on grafana, which chains to pdf-loader and postgres.
   playwright:
     build:
       context: .
@@ -113,5 +107,7 @@ services:
     depends_on:
       grafana:
         condition: service_healthy
+      pdf-loader:
+        condition: service_completed_successfully
     profiles:
       - playwright

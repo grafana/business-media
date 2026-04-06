@@ -45,8 +45,8 @@ and breaking changes for the Business Media plugin for Grafana.
   name services explicitly to avoid port conflicts.
 - Added `depends_on: pdf-loader` to `grafana` service so test data is
   loaded before Grafana starts. Simplified playwright dependency chain.
-- Added `infra` profile to `postgres` and `pdf-loader` so they only
-  start via `depends_on`, fixing CI exit-code tracking issue.
+- Added `playwright` profile to `pdf-loader` so CI's second compose
+  call doesn't recreate it. Local scripts name services explicitly.
 
 ## [7.3.0] - 2025-10-27
 

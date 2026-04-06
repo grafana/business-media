@@ -10,7 +10,7 @@
     "lint": "eslint --cache .",
     "lint:fix": "npm run lint -- --fix && prettier --write --list-different .",
     "sign": "npx --yes @grafana/sign-plugin@latest",
-    "start": "docker compose up --build",
+    "start": "docker compose up --build grafana postgres pdf-loader",
     "start:dev": "docker compose up --build grafana-dev postgres pdf-loader",
     "start:dev:update": "bash scripts/update-grafana-dev.sh && docker compose up --build grafana-dev postgres pdf-loader",
     "start:main": "docker compose up --build grafana-main postgres pdf-loader",
