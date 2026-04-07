@@ -1,3 +1,4 @@
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import { Configuration, ProvidePlugin } from 'webpack';
 import { merge } from 'webpack-merge';
 import grafanaConfig from './.config/webpack/webpack.config';
@@ -15,6 +16,12 @@ const config = async (env): Promise<Configuration> => {
     plugins: [
       new ProvidePlugin({
         Buffer: ['buffer', 'Buffer'],
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: '../LICENSE-original', to: '.' },
+          { from: '../NOTICES.md', to: '.' },
+        ],
       }),
     ],
     resolve: {

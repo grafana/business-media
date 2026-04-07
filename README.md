@@ -4,29 +4,39 @@
 [![CD](https://github.com/grafana/business-media/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-media/actions/workflows/publish.yml)
 [![License](https://img.shields.io/github/license/grafana/business-media)](https://github.com/grafana/business-media/blob/main/LICENSE)
 
->This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-media) - thanks for all your great work!
+>This project was originally contributed by
+>[Volkov Labs](https://github.com/volkovlabs/business-media) - thanks for all your great work!
 >
->We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-media/blob/main/NOTICES.md).
+>We have republished under the same plugin ID, keeping the community signature. This means you can
+>simply update your plugin version. A new ID would have required manual updates to your dashboards.
+>For additional information on the changes, see the
+>[Notices](https://github.com/grafana/business-media/blob/main/NOTICES.md).
 
-**Business Media** is a powerful Grafana plugin designed to display a variety of media files, including PNG, JPG, GIF, MP4, WEBM, MP3, OGG, and PDF, using base64 encoding or direct URLs. Seamlessly integrate multimedia content into your Grafana dashboards with ease and flexibility.
+**Business Media** is a powerful Grafana plugin designed to display a variety of media files,
+including PNG, JPG, GIF, MP4, WEBM, MP3, OGG, and PDF, using base64 encoding or direct URLs.
+Seamlessly integrate multimedia content into your Grafana dashboards with ease and flexibility.
 
-## 🚀 Features
+## Features
 
-- **Versatile Media Support**: Render images, videos, audio, and PDFs using base64-encoded data or URLs.
+- **Versatile Media Support**: Render images, videos, audio, and PDFs using base64-encoded data
+  or URLs.
 - **Pagination**: Display multiple media files with intuitive pagination controls.
-- **Flexible Data Handling**: Supports base64 content with or without format definitions (e.g., `data:image/jpg;base64,ENCODED-CONTENT`).
+- **Flexible Data Handling**: Supports base64 content with or without format definitions
+  (e.g., `data:image/jpg;base64,ENCODED-CONTENT`).
 - **Field Selection**: Choose specific fields from data sources returning multiple string fields.
-- **Customizable Display**: Fit media to panel size, retain original dimensions, or set custom dimensions.
-- **Interactive Navigation**: Add clickable URLs with titles to link to other dashboards, supporting dashboard variables.
+- **Customizable Display**: Fit media to panel size, retain original dimensions, or set custom
+  dimensions.
+- **Interactive Navigation**: Add clickable URLs with titles to link to other dashboards,
+  supporting dashboard variables.
 - **User-Friendly Toolbar**: Download, zoom, and navigate between media files effortlessly.
 
-## 📋 Requirements
+## Requirements
 
 Ensure your Grafana version meets the requirements for the Business Media panel:
 
 | Plugin Version       | Compatible Grafana Versions |
-| -------------------- | --------------------------- |
-| Business Media 7.X   | Grafana 11, Grafana 12      |
+|----------------------|-----------------------------|
+| Business Media 7.X   | Grafana 12                  |
 | Business Media 6.X   | Grafana 10, Grafana 11      |
 | Business Media 5.X   | Grafana 10, Grafana 11      |
 | Base64 Image/PDF 4.X | Grafana 9, Grafana 10       |
@@ -34,9 +44,11 @@ Ensure your Grafana version meets the requirements for the Business Media panel:
 | Base64 Image/PDF 2.X | Grafana 8                   |
 | Base64 Image/PDF 1.X | Grafana 7.1                 |
 
-## 🛠️ Installation
+## Installation
 
-Install the Business Media panel via the [Grafana Plugins Catalog](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) or using the Grafana CLI.
+Install the Business Media panel via the
+[Grafana Plugins Catalog](https://grafana.com/grafana/plugins/volkovlabs-image-panel/)
+or using the Grafana CLI.
 
 ### Using Grafana CLI
 
@@ -44,18 +56,19 @@ Install the Business Media panel via the [Grafana Plugins Catalog](https://grafa
 grafana cli plugins install volkovlabs-image-panel
 ```
 
-## 📚 Documentation
+## Documentation
 
 Explore detailed guides and resources to make the most of the Business Media panel:
 
-| Section                                                                    | Description                                                  |
-| -------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [Supported Formats](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/formats/) | Learn about supported media formats and how to display them. |
-| [Options](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/options/)           | Understand all available configuration options.              |
-| [Features](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/features/)         | Discover the full range of panel capabilities.               |
-| [Tutorials](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/tutorials/)       | Follow step-by-step guides for common use cases.             |
-| [Release notes](https://grafana.com/grafana/plugins/volkovlabs-image-panel/?tab=changelog)     | Stay updated with the latest features and improvements.      |
+| Section | Description |
+| --- | --- |
+| [Supported Formats](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/formats/) | Supported media formats. |
+| [Options](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/options/) | Configuration options. |
+| [Features](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/features/) | Panel capabilities. |
+| [Tutorials](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/tutorials/) | Step-by-step guides. |
+| [Release notes](https://grafana.com/grafana/plugins/volkovlabs-image-panel/?tab=changelog) | Latest changes. |
 
-## 📜 License
+## License
 
-This project is licensed under the Apache License Version 2.0. See the [LICENSE](https://github.com/grafana/business-media/blob/main/LICENSE) file for details.
+This project is licensed under the Apache License Version 2.0. See the
+[LICENSE](https://github.com/grafana/business-media/blob/main/LICENSE) file for details.

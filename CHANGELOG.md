@@ -2,7 +2,60 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this changelog is maintained to provide a clear history of updates, features, and breaking changes for the Business Media plugin for Grafana.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this changelog is maintained to provide a clear history of updates, features,
+and breaking changes for the Business Media plugin for Grafana.
+
+## [Unreleased]
+
+### Added
+
+- Added `AGENTS.md` with build commands, code style guidelines, and
+  critical rules for AI coding agents.
+- Added `cspell.config.json` for spell checking with project-specific
+  dictionary.
+- Added `.markdownlint.yaml` with 120-character line length limit.
+- Added Docker Compose services for `postgres`, `pdf-loader`, and
+  `playwright` with profile-based startup.
+- Enabled Playwright tests against Grafana dev image in CI.
+- Added CI workflow for Jest coverage report on PRs.
+- Added CI workflow for categorized file changes summary on PRs.
+- Updated GitHub Actions to latest versions (checkout v6,
+  setup-node v6, changed-files v47).
+
+### Changed
+
+- Updated Node version from 20 to 24.
+- Updated Grafana plugin tooling and dependencies.
+- Upgraded minor/patch dependencies (@swc/core, @swc/helpers,
+  @types/node, @grafana/plugin-e2e, @playwright/test,
+  react-medium-image-zoom, sass).
+- Upgraded @grafana/data, runtime, ui to 12.4.2.
+- Upgraded uuid to v13 and removed @types/uuid.
+- Updated Playwright Docker image to v1.59.1-noble.
+- Pinned CI/CD workflows to ci-cd-workflows/v7.0.
+- Bumped `grafanaDependency` to `>=12.0.0`.
+- Reformatted markdown files to fit within 120-character line limit.
+- Included LICENSE-original and NOTICES.md in webpack build output.
+- Simplified Docker Compose to a single `grafana` service.
+
+### Fixed
+
+- Replaced deprecated `PageToolbar` with custom div-based toolbar.
+- Added missing `aria-label` to icon-only ToolbarButton components.
+- Fixed `RefObject` type for toolbar ref.
+- Fixed `react-hooks/set-state-in-effect` lint error in useMediaData
+  hook by replacing `useEffect` + `setState` with a
+  set-state-during-render pattern.
+- Added `mediaSource.url` guard to download button, removing unsafe
+  non-null assertion.
+- Only render navigation container when navigation button type is
+  enabled.
+- Restored ResizeObserver and IntersectionObserver mocks in
+  jest-setup.js.
+- Restored `--coverage` flag in `test:ci` script.
+- Replaced deprecated `npm install --only=dev` with `npm ci` in
+  Playwright Dockerfile.
 
 ## [7.3.0] - 2025-10-27
 
@@ -10,7 +63,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Grafana Labs fork.
 
-## [7.2.0] - Unreleased
+## [7.2.0] - Unreleased (upstream, superseded by 7.3.0)
 
 ### Changed
 
@@ -81,8 +134,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Updated video overview documentation ([#100](https://github.com/volkovlabs/business-media/pull/100)).
-- Added plugin E2E tests and removed Cypress dependency ([#101](https://github.com/volkovlabs/business-media/pull/101), [#102](https://github.com/volkovlabs/business-media/pull/102), [#103](https://github.com/volkovlabs/business-media/pull/103), [#105](https://github.com/volkovlabs/business-media/pull/105)).
-- Added support for loading images and videos from URLs, along with a video toolbar ([#111](https://github.com/volkovlabs/business-media/pull/111), [#116](https://github.com/volkovlabs/business-media/pull/116)).
+- Added plugin E2E tests and removed Cypress dependency
+  ([#101](https://github.com/volkovlabs/business-media/pull/101),
+  [#102](https://github.com/volkovlabs/business-media/pull/102),
+  [#103](https://github.com/volkovlabs/business-media/pull/103),
+  [#105](https://github.com/volkovlabs/business-media/pull/105)).
+- Added support for loading images and videos from URLs, along with a video toolbar
+  ([#111](https://github.com/volkovlabs/business-media/pull/111),
+  [#116](https://github.com/volkovlabs/business-media/pull/116)).
 - Updated dependencies to support Grafana 11 ([#114](https://github.com/volkovlabs/business-media/pull/114)).
 - Updated to use frame utilities from packages ([#115](https://github.com/volkovlabs/business-media/pull/115)).
 - Improved E2E workflow using Docker ([#117](https://github.com/volkovlabs/business-media/pull/117)).
@@ -138,7 +197,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Migrated to Plugin Tools 1.5.2 and updated to Node 18 ([#72](https://github.com/volkovlabs/business-media/pull/72), [#73](https://github.com/volkovlabs/business-media/pull/73)).
 - Increased test coverage for better reliability ([#72](https://github.com/volkovlabs/business-media/pull/72)).
 - Tested compatibility with Grafana 10 Preview ([#74](https://github.com/volkovlabs/business-media/pull/74)).
-- Added toolbar for downloading, zooming, and navigating between images ([#75](https://github.com/volkovlabs/business-media/pull/75), [#76](https://github.com/volkovlabs/business-media/pull/76), [#77](https://github.com/volkovlabs/business-media/pull/77)).
+- Added toolbar for downloading, zooming, and navigating between images
+  ([#75](https://github.com/volkovlabs/business-media/pull/75),
+  [#76](https://github.com/volkovlabs/business-media/pull/76),
+  [#77](https://github.com/volkovlabs/business-media/pull/77)).
 
 ## [3.5.0] - 2023-03-07
 
@@ -227,7 +289,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- Added `display:block` to properly display href links ([Grafana Issue #41445](https://github.com/grafana/grafana/issues/41445)) ([#21](https://github.com/volkovlabs/business-media/pull/21)).
+- Added `display:block` to properly display href links
+  ([Grafana Issue #41445](https://github.com/grafana/grafana/issues/41445))
+  ([#21](https://github.com/volkovlabs/business-media/pull/21)).
 
 ## [2.3.0] - 2021-11-08
 

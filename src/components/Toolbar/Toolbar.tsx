@@ -1,6 +1,6 @@
 import 'react-medium-image-zoom/dist/styles.css';
 
-import { PageToolbar, ToolbarButton, useStyles2 } from '@grafana/ui';
+import { ToolbarButton, useStyles2 } from '@grafana/ui';
 import { saveAs } from 'file-saver';
 import React, { Dispatch, ReactNode, RefObject, useCallback, useEffect, useRef, useState } from 'react';
 import { Controlled as ControlledZoom } from 'react-medium-image-zoom';
@@ -75,7 +75,7 @@ interface Props {
    *
    * @type {RefObject<HTMLDivElement>}
    */
-  toolbarRef: RefObject<HTMLDivElement | null>;
+  toolbarRef: RefObject<HTMLDivElement>;
 }
 
 /**
@@ -278,58 +278,86 @@ export const Toolbar: React.FC<Props> = ({
     return buttons;
   };
 
+  /**
+   * Get Toolbar Right Buttons
+   */
+  const getRightButtons = () => {
+    const buttons: ReactNode[] = [];
+
+    if (options.buttons.includes(ButtonType.DOWNLOAD) && mediaSource.type === MediaFormat.IMAGE && mediaSource.url) {
+      const downloadUrl = mediaSource.url;
+      buttons.push(
+        <ToolbarButton
+          key="download"
+          icon="save"
+          onClick={() => {
+            saveAs(downloadUrl);
+          }}
+          data-testid={TEST_IDS.panel.buttonDownload}
+        >
+          Download
+        </ToolbarButton>
+      );
+    }
+
+    if (
+      options.buttons.includes(ButtonType.ZOOM) &&
+      options.zoomType !== ZoomType.PANPINCH &&
+      mediaSource.type === MediaFormat.IMAGE
+    ) {
+      buttons.push(
+        <ToolbarButton
+          key="zoom"
+          icon="search-plus"
+          aria-label="Zoom"
+          onClick={() => {
+            setIsZoomed(true);
+          }}
+          data-testid={TEST_IDS.panel.buttonZoom}
+        />
+      );
+    }
+
+    if (
+      options.buttons.includes(ButtonType.ZOOM) &&
+      options.zoomType === ZoomType.PANPINCH &&
+      mediaSource.type === MediaFormat.IMAGE
+    ) {
+      buttons.push(
+        <ToolbarButton
+          key="zoom-in"
+          icon="search-plus"
+          aria-label="Zoom in"
+          onClick={onZoomPanPinchIn}
+          data-testid={TEST_IDS.panel.buttonZoomPanPinchIn}
+        />,
+        <ToolbarButton
+          key="zoom-out"
+          icon="search-minus"
+          aria-label="Zoom out"
+          onClick={onZoomPanPinchOut}
+          data-testid={TEST_IDS.panel.buttonZoomPanPinchOut}
+        />,
+        <ToolbarButton
+          key="zoom-reset"
+          icon="times-circle"
+          aria-label="Reset zoom"
+          onClick={onResetZoomPanPinch}
+          data-testid={TEST_IDS.panel.buttonZoomPanPinchReset}
+        />
+      );
+    }
+
+    return buttons;
+  };
+
   return (
     <>
-      <div ref={toolbarRef}>
-        <PageToolbar
-          forceShowLeftItems={options.buttons.includes(ButtonType.NAVIGATION)}
-          leftItems={options.buttons.includes(ButtonType.NAVIGATION) ? getToolbarLeftButtons() : undefined}
-        >
-          {options.buttons.includes(ButtonType.DOWNLOAD) && mediaSource.type === MediaFormat.IMAGE && (
-            <ToolbarButton
-              icon="save"
-              onClick={() => {
-                saveAs(mediaSource.url!);
-              }}
-              data-testid={TEST_IDS.panel.buttonDownload}
-            >
-              Download
-            </ToolbarButton>
-          )}
-
-          {options.buttons.includes(ButtonType.ZOOM) &&
-            options.zoomType !== ZoomType.PANPINCH &&
-            mediaSource.type === MediaFormat.IMAGE && (
-              <ToolbarButton
-                icon="search-plus"
-                onClick={() => {
-                  setIsZoomed(true);
-                }}
-                data-testid={TEST_IDS.panel.buttonZoom}
-              />
-            )}
-          {options.buttons.includes(ButtonType.ZOOM) &&
-            options.zoomType === ZoomType.PANPINCH &&
-            mediaSource.type === MediaFormat.IMAGE && (
-              <>
-                <ToolbarButton
-                  icon="search-plus"
-                  onClick={onZoomPanPinchIn}
-                  data-testid={TEST_IDS.panel.buttonZoomPanPinchIn}
-                />
-                <ToolbarButton
-                  icon="search-minus"
-                  onClick={onZoomPanPinchOut}
-                  data-testid={TEST_IDS.panel.buttonZoomPanPinchOut}
-                />
-                <ToolbarButton
-                  icon="times-circle"
-                  onClick={onResetZoomPanPinch}
-                  data-testid={TEST_IDS.panel.buttonZoomPanPinchReset}
-                />
-              </>
-            )}
-        </PageToolbar>
+      <div ref={toolbarRef} className={styles.toolbar}>
+        {options.buttons.includes(ButtonType.NAVIGATION) && (
+          <div className={styles.leftItems}>{getToolbarLeftButtons()}</div>
+        )}
+        <div className={styles.rightItems}>{getRightButtons()}</div>
       </div>
       {options.buttons.includes(ButtonType.ZOOM) && mediaSource.type === MediaFormat.IMAGE
         ? renderZoomImage(children)
