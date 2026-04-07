@@ -246,8 +246,14 @@ import { ImageSizeMode, MediaFormat, PanelOptions } from '../../types';
 
 ### CI/CD
 
-- **CI** (`.github/workflows/push.yml`): Runs on push to `main` and all PRs. Lints, tests, builds, signs, and uploads artifacts.
-- **CD** (`.github/workflows/publish.yml`): Release and publish workflow.
+- **CI** (`.github/workflows/push.yml`): Runs on push to `main` and
+  all PRs. Lints, tests, builds, signs, and uploads artifacts.
+- **CD** (`.github/workflows/publish.yml`): Release and publish
+  workflow.
+- **Coverage** (`.github/workflows/coverage.yml`): Posts Jest
+  coverage report on PRs.
+- **PR Files** (`.github/workflows/pr-files.yml`): Posts categorized
+  file changes summary on PRs.
 - The `.config/` directory is **scaffolded by Grafana** — do not edit files in it.
 
 ### ESLint

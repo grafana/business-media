@@ -18,8 +18,10 @@ and breaking changes for the Business Media plugin for Grafana.
 - Added Docker Compose services for `postgres`, `pdf-loader`, and
   `playwright` with profile-based startup.
 - Enabled Playwright tests against Grafana dev image in CI.
-- Added CI workflow for Jest coverage comparison on PRs.
+- Added CI workflow for Jest coverage report on PRs.
 - Added CI workflow for categorized file changes summary on PRs.
+- Updated GitHub Actions to latest versions (checkout v6,
+  setup-node v6, changed-files v47).
 
 ### Changed
 
@@ -52,6 +54,8 @@ and breaking changes for the Business Media plugin for Grafana.
 - Restored ResizeObserver and IntersectionObserver mocks in
   jest-setup.js.
 - Restored `--coverage` flag in `test:ci` script.
+- Replaced deprecated `npm install --only=dev` with `npm ci` in
+  Playwright Dockerfile.
 
 ## [7.3.0] - 2025-10-27
 
