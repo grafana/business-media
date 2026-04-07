@@ -3,8 +3,6 @@ services:
     extends:
       file: .config/docker-compose-base.yaml
       service: grafana
-    ports:
-      - 3000:3000/tcp
     environment:
       GF_DEFAULT_APP_MODE: development
       GF_USERS_DEFAULT_THEME: light
@@ -18,7 +16,6 @@ services:
 
   postgres:
     image: postgres
-    restart: always
     environment:
       POSTGRES_PASSWORD: postgres
     healthcheck:
@@ -45,55 +42,6 @@ services:
         condition: service_healthy
     profiles:
       - playwright
-
-  grafana-dev:
-    extends:
-      file: .config/docker-compose-base.yaml
-      service: grafana
-    build:
-      context: .config
-      args:
-        grafana_image: ${GRAFANA_IMAGE:-grafana-enterprise-dev}
-        grafana_version: ${GRAFANA_DEV_VERSION:-6711104e}
-        development: "true"
-    ports:
-      - 3000:3000/tcp
-    environment:
-      GF_DEFAULT_APP_MODE: development
-      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /etc/grafana/provisioning/dashboards/panels.json
-      GF_PLUGINS_PREINSTALL: marcusolsson-static-datasource,golioth-websocket-datasource,yesoreyeram-infinity-datasource
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-      start_period: 30s
-    profiles:
-      - dev
-
-  grafana-main:
-    extends:
-      file: .config/docker-compose-base.yaml
-      service: grafana
-    build:
-      context: .config
-      args:
-        grafana_version: ${GRAFANA_VERSION:-main}
-        development: "true"
-    ports:
-      - 3000:3000/tcp
-    environment:
-      GF_DEFAULT_APP_MODE: development
-      GF_USERS_DEFAULT_THEME: light
-      GF_PLUGINS_PREINSTALL: marcusolsson-static-datasource,golioth-websocket-datasource,yesoreyeram-infinity-datasource
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-      start_period: 30s
-    profiles:
-      - main
 
   playwright:
     build:

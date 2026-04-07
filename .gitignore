@@ -24,9 +24,6 @@ work/
 ci/
 e2e-results/
 
-# Environment
-.env
-
 # Editors
 .DS_Store
 .idea

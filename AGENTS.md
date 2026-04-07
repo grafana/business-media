@@ -83,15 +83,9 @@ npm run dev
 
 # Start local Grafana with plugin (Docker)
 npm start                # grafana-enterprise:12.4.0 (default)
-npm run start:dev        # grafana-enterprise-dev (latest commit hash)
-npm run start:dev:update # same as start:dev — fetch latest image tag first
-npm run start:main       # grafana-enterprise:main
 
 # Stop all running containers
 npm run stop
-
-# Update grafana-enterprise-dev tag in .env (auto-fetches from Docker Hub)
-bash scripts/update-grafana-dev.sh
 
 # Type-check without emitting
 npm run typecheck
