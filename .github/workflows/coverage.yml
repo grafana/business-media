@@ -13,7 +13,7 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - name: Checkout
+      - name: Checkout PR branch
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Setup Node
@@ -25,8 +25,37 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Coverage report
-        uses: ArtiomTr/jest-coverage-report-action@262a7bb0b20c4d1d6b6b026af0f008f78da72788 # v2
+      - name: Run tests with coverage (PR)
+        run: npx jest --ci --coverage --coverageReporters=json-summary --coverageReporters=json --maxWorkers=4
+
+      - name: Save PR coverage
+        run: |
+          mkdir -p /tmp/pr-coverage
+          cp coverage/coverage-summary.json /tmp/pr-coverage/coverage-summary.json
+
+      - name: Checkout base branch
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
-          test-script: npx jest --ci --coverage --maxWorkers=4
-          annotations: none
+          ref: ${{ github.event.pull_request.base.ref }}
+          clean: false
+
+      - name: Install dependencies (base)
+        run: npm ci
+
+      - name: Run tests with coverage (base)
+        run: npx jest --ci --coverage --coverageReporters=json-summary --coverageReporters=json --maxWorkers=4
+
+      - name: Save base coverage
+        run: |
+          mkdir -p /tmp/base-coverage
+          cp coverage/coverage-summary.json /tmp/base-coverage/coverage-summary.json
+
+      - name: Restore PR coverage
+        run: |
+          cp /tmp/pr-coverage/coverage-summary.json coverage/coverage-summary.json
+
+      - name: Coverage report
+        uses: davelosert/vitest-coverage-report-action@3c50566c523e04813df28de8f7c48dd97d663f1c # v2
+        with:
+          json-summary-compare-path: /tmp/base-coverage/coverage-summary.json
+          file-coverage-mode: all
