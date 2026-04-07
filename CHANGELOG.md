@@ -10,23 +10,6 @@ and breaking changes for the Business Media plugin for Grafana.
 
 ### Fixed
 
-- Fixed docker-compose build args for `grafana-dev` and `grafana-main` to pass
-  `grafana_version` and `development` at build time.
-- Added missing `default` profile to `grafana`, `postgres`, `pdf-loader`,
-  and `playwright` services.
-- Removed redundant `server` script from `package.json`; replaced with
-  profile-based `start`, `start:dev`, and `start:main` scripts.
-- Consolidated `stop:dev`, `stop:main`, and `stop:e2e` into a single
-  `stop` script since `docker compose down` stops all profiles.
-- Updated AGENTS.md build commands to document `start:dev`, `start:main`,
-  and `stop` scripts.
-- Switched `grafana-dev` service to `grafana-enterprise-dev` image with
-  auto-update script (`scripts/update-grafana-dev.sh`) that fetches the
-  latest tag from Docker Hub and writes it to `.env`.
-- Added `start:dev:update` npm script to fetch latest dev image before
-  starting.
-- Added `.env` to `.gitignore`.
-- Updated AGENTS.md with `start:dev:update` and update script docs.
 - Added rule to AGENTS.md: never add AI attribution lines to PR summaries
   or commit messages.
 - Added rule to AGENTS.md: PR summaries must use categories to organize
