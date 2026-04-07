@@ -23,10 +23,12 @@ and breaking changes for the Business Media plugin for Grafana.
 
 - Updated Node version from 20 to 24.
 - Updated Grafana plugin tooling and dependencies.
-- Upgraded 15 minor/patch dependencies.
+- Upgraded minor/patch dependencies (@swc/core, @swc/helpers,
+  @types/node, @grafana/plugin-e2e, @playwright/test,
+  react-medium-image-zoom, sass).
 - Upgraded @grafana/data, runtime, ui to 12.4.2.
 - Upgraded uuid to v13 and removed @types/uuid.
-- Updated Playwright Docker image to v1.58.2-noble.
+- Updated Playwright Docker image to v1.59.1-noble.
 - Pinned CI/CD workflows to ci-cd-workflows/v7.0.
 - Bumped `grafanaDependency` to `>=12.0.0`.
 - Reformatted markdown files to fit within 120-character line limit.
