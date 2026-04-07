@@ -8,34 +8,8 @@ and breaking changes for the Business Media plugin for Grafana.
 
 ## [Unreleased]
 
-### Fixed
+### Changed
 
-- Added rule to AGENTS.md: never add AI attribution lines to PR summaries
-  or commit messages.
-- Added rule to AGENTS.md: PR summaries must use categories to organize
-  changes.
-- Renamed `GRAFANA_VERSION` to `GRAFANA_DEV_VERSION` for `grafana-dev`
-  service to avoid conflict with `grafana-main` which uses
-  `GRAFANA_VERSION` for branch-based tags.
-- Fixed `sed -i` portability in `update-grafana-dev.sh` for Linux.
-- Removed `playwright` from `default` profile so `npm start` no longer
-  spins up the Playwright container.
-- Improved tag filtering in `update-grafana-dev.sh` to use hex regex
-  instead of length check.
-- Added comment clarifying playwright service depends_on behavior.
-- Removed profiles from `grafana`, `postgres`, and `pdf-loader` so
-  `docker compose up` works without a profile flag. Dev/main scripts
-  name services explicitly to avoid port conflicts.
-- Added `depends_on: pdf-loader` to `grafana` service so test data is
-  loaded before Grafana starts. Simplified playwright dependency chain.
-- Added `playwright` profile to `pdf-loader` so CI's second compose
-  call doesn't recreate it. Local scripts name services explicitly.
-
-## [7.3.0] - 2025-10-27
-
-### Project Updates
-
-- Grafana Labs fork.
 - Added `AGENTS.md` with build commands, code style guidelines, and critical rules for AI coding agents.
 - Added `cspell.config.json` for spell checking with project-specific dictionary.
 - Added `.markdownlint.yaml` with 120-character line length limit.
@@ -59,8 +33,15 @@ and breaking changes for the Business Media plugin for Grafana.
 - Fixed broken `stop:e2e` script to use `--profile playwright`.
 - Restored `--coverage` flag in `test:ci` script.
 - Bumped `grafanaDependency` to `>=12.0.0`.
-- Updated `docker-compose.yaml` with dev, main, and playwright profiles.
 - Enabled Playwright tests against Grafana dev image in CI.
+- Added rules to AGENTS.md: no AI attribution lines, categorized PR
+  summaries.
+
+## [7.3.0] - 2025-10-27
+
+### Project Updates
+
+- Grafana Labs fork.
 
 ## [7.2.0] - Unreleased (upstream, superseded by 7.3.0)
 
