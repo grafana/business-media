@@ -33,8 +33,6 @@ The Business Media panel requires the following Grafana versions:
 
 Install the Business Media panel from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-image-panel/) or by using the Grafana command line tool.
 
-{{< youtube id="1qYzHfPXJF8" >}}
-
 To install with the CLI, run:
 
 ```sh
@@ -53,16 +51,6 @@ grafana cli plugins install volkovlabs-image-panel
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-media/media-7.png" class="border" alt="How to start with the Business Media panel" >}}
 
-## Tutorial
-
-This tutorial explains all plugin options in version 5.0.0.
-
-Learn how to display images, video, audio, and PDF files on your Grafana dashboard. The tutorial shows how to set up the toolbar, URL links, image scaling, and other parameters.
-
-{{< youtube id="hLMtsCWPOg8" >}}
-
-There are many other tutorials that you can find helpful. You can review [all tutorials related to this plugin](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/tutorials/).
-
 ## Documentation
 
 | Section                      | Description                                                         |
@@ -70,7 +58,6 @@ There are many other tutorials that you can find helpful. You can review [all tu
 | [Supported formats](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/formats/) | Explains what formats are supported and how to display media files. |
 | [Options](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/options)           | Describes all plugin options                                        |
 | [Features](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/features/)         | Demonstrates panel capabilities.                                    |
-| [Tutorials](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/tutorials/)       | Easy to follow tutorials                                            |
 | [Release notes](http://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/release/)     | Stay up to date with the latest features and updates.               |
 
 ## License
