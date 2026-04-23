@@ -65,7 +65,6 @@ Explore detailed guides and resources to make the most of the Business Media pan
 | [Supported Formats](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/formats/) | Supported media formats. |
 | [Options](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/options/) | Configuration options. |
 | [Features](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/features/) | Panel capabilities. |
-| [Tutorials](http://grafana.com/docs/plugins/volkovlabs-image-panel/latest/tutorials/) | Step-by-step guides. |
 | [Release notes](https://grafana.com/grafana/plugins/volkovlabs-image-panel/?tab=changelog) | Latest changes. |
 
 ## License
