@@ -99,7 +99,7 @@
     "react-zoom-pan-pinch": "^3.7.0",
     "semver": "^7.7.4",
     "tslib": "^2.8.1",
-    "uuid": "^13.0.0"
+    "uuid": "^14.0.0"
   },
   "packageManager": "npm@11.11.1"
 }
