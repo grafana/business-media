@@ -10,26 +10,12 @@ and breaking changes for the Business Media plugin for Grafana.
 
 ### Fixed
 
-- Fixed E2E test `Should add empty default image panel` failing on Grafana 13+ and React 19 preview by navigating to an empty provisioned dashboard before calling `addPanel()`, avoiding portal overlay interference.
-- Fixed `test:e2e:docker` race condition where `pdf-loader` exiting triggered `--abort-on-container-exit` and killed Grafana before Playwright could run.
-
 - Fixed missing accessibility labels on icon-only toolbar buttons.
-- Navigation controls are no longer shown when the navigation button type is disabled.
+- Fixed navigation controls being visible when the navigation button type is set to disabled.
 
 ### Changed
 
 - Plugin now requires Grafana 12.0.0 or newer.
-
-### Project Updates
-
-- Updated CI/CD workflows.
-- Updated development scripts and tooling.
-- Enabled Grafana dev image in the Playwright E2E test matrix.
-- `test:e2e:docker` now tees all docker compose output to `playwright-output.log` for post-run inspection.
-- Optimized `test/Dockerfile`: layered COPY so `npm ci` and browser install are cached until `package.json` changes; build context reduced from 560 MB to ~1 MB via `.dockerignore`.
-- Upgraded `@grafana/plugin-e2e` to v3.6.1 to pick up native Grafana 13 UI support in `addPanel()`.
-- Updated `@swc/core`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `eslint-plugin-react-hooks`, `markdownlint-cli2`, `prettier`, `terser-webpack-plugin`, and `webpack` to latest patch/minor versions.
-- Upgraded `cspell` from v9.8.0 to v10.0.0 and `uuid` from v13.0.0 to v14.0.0.
 
 ## [7.3.0] - 2025-10-27
 
