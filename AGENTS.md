@@ -76,11 +76,6 @@ npm run build
 # Dev build with watch mode
 npm run dev
 
-# Start local Grafana with plugin (Docker)
-npm start                # grafana-enterprise:12.4.0 (default)
-
-# Stop all running containers
-npm run stop
 
 # Type-check without emitting
 npm run typecheck
@@ -90,6 +85,12 @@ npm run lint
 npm run lint:fix
 npm run markdownlint
 npm run spellcheck
+
+# Start local Grafana with plugin (Docker)
+npm start                # grafana-enterprise:12.4.0 (default)
+
+# Stop all running containers
+npm run stop
 
 # Unit tests — watch mode (default)
 npm test
