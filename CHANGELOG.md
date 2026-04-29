@@ -8,60 +8,20 @@ and breaking changes for the Business Media plugin for Grafana.
 
 ## [Unreleased]
 
-### Added
+### Fixed
 
-- Added `AGENTS.md` with build commands, code style guidelines, and
-  critical rules for AI coding agents.
-- Added `cspell.config.json` for spell checking with project-specific
-  dictionary.
-- Added `.markdownlint-cli2.yaml` with 120-character line length limit.
-- Added Docker Compose services for `postgres`, `pdf-loader`, and
-  `playwright` with profile-based startup.
-- Enabled Playwright tests against Grafana dev image in CI.
-- Added CI workflow for Jest coverage report on PRs.
-- Added CI workflow for categorized file changes summary on PRs.
-- Updated GitHub Actions to latest versions (checkout v6,
-  setup-node v6, changed-files v47).
-
-### Project Updates
-
-- Updated CI/CD workflows to `v7.3.1`; added changelog stamping on release and attestation permissions.
-- Added `markdownlint` and `spellcheck` npm scripts.
-- Updated development scripts.
+- Fixed missing accessibility labels on icon-only toolbar buttons.
+- Navigation controls are no longer shown when the navigation button type is disabled.
 
 ### Changed
 
-- Updated Node version from 20 to 24.
-- Updated Grafana plugin tooling and dependencies.
-- Upgraded minor/patch dependencies (@swc/core, @swc/helpers,
-  @types/node, @grafana/plugin-e2e, @playwright/test,
-  react-medium-image-zoom, sass).
-- Upgraded @grafana/data, runtime, ui to 12.4.2.
-- Upgraded uuid to v13 and removed @types/uuid.
-- Updated Playwright Docker image to v1.59.1-noble.
-- Pinned CI/CD workflows to ci-cd-workflows/v7.0.
-- Bumped `grafanaDependency` to `>=12.0.0`.
-- Reformatted markdown files to fit within 120-character line limit.
-- Included LICENSE-original and NOTICES.md in webpack build output.
-- Simplified Docker Compose to a single `grafana` service.
+- Plugin now requires Grafana 12.0.0 or newer.
 
-### Fixed
+### Project Updates
 
-- Replaced deprecated `PageToolbar` with custom div-based toolbar.
-- Added missing `aria-label` to icon-only ToolbarButton components.
-- Fixed `RefObject` type for toolbar ref.
-- Fixed `react-hooks/set-state-in-effect` lint error in useMediaData
-  hook by replacing `useEffect` + `setState` with a
-  set-state-during-render pattern.
-- Added `mediaSource.url` guard to download button, removing unsafe
-  non-null assertion.
-- Only render navigation container when navigation button type is
-  enabled.
-- Restored ResizeObserver and IntersectionObserver mocks in
-  jest-setup.js.
-- Restored `--coverage` flag in `test:ci` script.
-- Replaced deprecated `npm install --only=dev` with `npm ci` in
-  Playwright Dockerfile.
+- Updated CI/CD workflows.
+- Added `markdownlint` and `spellcheck` npm scripts.
+- Updated development scripts and tooling.
 
 ## [7.3.0] - 2025-10-27
 
