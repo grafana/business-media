@@ -10,6 +10,8 @@ and breaking changes for the Business Media plugin for Grafana.
 
 ### Fixed
 
+- Fixed E2E test `Should add empty default image panel` failing on Grafana 13+ and React 19 preview by navigating to an empty provisioned dashboard before calling `addPanel()`, avoiding portal overlay interference.
+
 - Fixed missing accessibility labels on icon-only toolbar buttons.
 - Navigation controls are no longer shown when the navigation button type is disabled.
 
@@ -21,6 +23,7 @@ and breaking changes for the Business Media plugin for Grafana.
 
 - Updated CI/CD workflows.
 - Updated development scripts and tooling.
+- Enabled Grafana dev image in the Playwright E2E test matrix.
 
 ## [7.3.0] - 2025-10-27
 
