@@ -18,7 +18,7 @@
     "test:ci": "jest --passWithNoTests --maxWorkers 4 --coverage",
     "test:e2e": "npx playwright test",
     "test:e2e:dev": "npx playwright test --ui",
-    "test:e2e:docker": "docker compose --profile playwright up --force-recreate --abort-on-container-exit --exit-code-from playwright",
+    "test:e2e:docker": "bash -c 'set -o pipefail; docker compose --profile playwright up --force-recreate --abort-on-container-exit --exit-code-from playwright 2>&1 | tee playwright-output.log'",
     "typecheck": "tsc --noEmit",
     "upgrade": "npm upgrade --save"
   },

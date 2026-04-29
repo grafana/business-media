@@ -24,6 +24,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - Updated CI/CD workflows.
 - Updated development scripts and tooling.
 - Enabled Grafana dev image in the Playwright E2E test matrix.
+- `test:e2e:docker` now tees all docker compose output to `playwright-output.log` for post-run inspection.
 
 ## [7.3.0] - 2025-10-27
 
