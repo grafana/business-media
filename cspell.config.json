@@ -26,6 +26,7 @@
     "levitate",
     "marcusolsson",
     "markdownlint",
+    "networkidle",
     "nopadding",
     "pangea",
     "pids",
@@ -64,6 +65,7 @@
   ],
   "ignorePaths": [
     ".config/**",
+    "playwright-report/**",
     "coverage/**",
     "dist/**",
     "docs/**",
