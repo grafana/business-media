@@ -20,7 +20,6 @@ and breaking changes for the Business Media plugin for Grafana.
 ### Project Updates
 
 - Updated CI/CD workflows.
-- Added `markdownlint` and `spellcheck` npm scripts.
 - Updated development scripts and tooling.
 
 ## [7.3.0] - 2025-10-27
