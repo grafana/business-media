@@ -53,7 +53,7 @@ media files (images, video, audio, PDF) in Grafana dashboards.
   changes. Group bullet points under headings like
   `### Added`, `### Fixed`, `### Changed`,
   `### Removed`, `### Dependencies`, `### CI/CD`,
-  `### Documentation`, etc. Always include a
+  `### Documentation`, `### Infrastructure`, etc. Always include a
   `## Test plan` section with a checklist.
 - **Never add "Generated with Claude" or similar
   attribution lines** to PR summaries, commit messages,
