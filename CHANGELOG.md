@@ -16,6 +16,7 @@ and breaking changes for the Business Media plugin for Grafana.
 ### Changed
 
 - Plugin now requires Grafana 12.0.0 or newer.
+- Verified compatibility with Grafana 13.
 
 ## [7.3.0] - 2025-10-27
 
