@@ -14,7 +14,7 @@ and breaking changes for the Business Media plugin for Grafana.
   critical rules for AI coding agents.
 - Added `cspell.config.json` for spell checking with project-specific
   dictionary.
-- Added `.markdownlint.yaml` with 120-character line length limit.
+- Added `.markdownlint-cli2.yaml` with 120-character line length limit.
 - Added Docker Compose services for `postgres`, `pdf-loader`, and
   `playwright` with profile-based startup.
 - Enabled Playwright tests against Grafana dev image in CI.
@@ -22,6 +22,12 @@ and breaking changes for the Business Media plugin for Grafana.
 - Added CI workflow for categorized file changes summary on PRs.
 - Updated GitHub Actions to latest versions (checkout v6,
   setup-node v6, changed-files v47).
+
+### Project Updates
+
+- Updated CI/CD workflows to `v7.3.1`; added changelog stamping on release and attestation permissions.
+- Added `markdownlint` and `spellcheck` npm scripts.
+- Updated development scripts.
 
 ### Changed
 

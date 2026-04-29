@@ -27,16 +27,11 @@ media files (images, video, audio, PDF) in Grafana dashboards.
 - Use `@grafana/plugin-e2e` for E2E tests.
 - Grafana API docs:
   <https://grafana.com/developers/plugin-tools/llms.txt>
-- **Always run `npx markdownlint-cli2`** on any `.md`
-  file you create or modify (including `AGENTS.md`,
-  `README.md`, `CHANGELOG.md`) and fix all reported
-  issues before committing.
+- **Always run `npm run markdownlint`** on any `.md` file you create or modify
+  (including `AGENTS.md`, `README.md`, `CHANGELOG.md`) and fix all reported issues before committing.
 - **Always run `npm run typecheck`** when `src/` files
   are changed and fix any type errors before committing.
-- **Always run cspell** after making changes:
-  `npx cspell -c cspell.config.json
-  "**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
-  and fix any issues before committing. Add new words
+- **Always run `npm run spellcheck`** before committing. Fix any issues and add new words
   to `cspell.config.json` if they are legitimate.
 - **Always update `CHANGELOG.md`** when committing any
   change. Include the changelog update in the same commit.
@@ -93,6 +88,8 @@ npm run typecheck
 # Lint
 npm run lint
 npm run lint:fix
+npm run markdownlint
+npm run spellcheck
 
 # Unit tests — watch mode (default)
 npm test
