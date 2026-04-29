@@ -28,6 +28,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - `test:e2e:docker` now tees all docker compose output to `playwright-output.log` for post-run inspection.
 - Optimized `test/Dockerfile`: layered COPY so `npm ci` and browser install are cached until `package.json` changes; build context reduced from 560 MB to ~1 MB via `.dockerignore`.
 - Upgraded `@grafana/plugin-e2e` to v3.6.1 to pick up native Grafana 13 UI support in `addPanel()`.
+- Updated `@swc/core`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `eslint-plugin-react-hooks`, `markdownlint-cli2`, `prettier`, `terser-webpack-plugin`, and `webpack` to latest patch/minor versions.
 
 ## [7.3.0] - 2025-10-27
 
