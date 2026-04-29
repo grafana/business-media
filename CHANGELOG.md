@@ -11,6 +11,7 @@ and breaking changes for the Business Media plugin for Grafana.
 ### Fixed
 
 - Fixed E2E test `Should add empty default image panel` failing on Grafana 13+ and React 19 preview by navigating to an empty provisioned dashboard before calling `addPanel()`, avoiding portal overlay interference.
+- Fixed `test:e2e:docker` race condition where `pdf-loader` exiting triggered `--abort-on-container-exit` and killed Grafana before Playwright could run.
 
 - Fixed missing accessibility labels on icon-only toolbar buttons.
 - Navigation controls are no longer shown when the navigation button type is disabled.
