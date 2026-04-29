@@ -69,13 +69,12 @@ export const ImagePanel: React.FC<Props> = ({ timeRange, options, data, width, h
   }, [width, height, options.description, description, currentIndex, isNavigationShown]);
 
   /**
-   * Update current index on data series decrease
+   * Clamp current index when data series shrink (adjust state during render,
+   * which is more efficient than useEffect + setState).
    */
-  useEffect(() => {
-    if (rowsLength !== 0 && currentIndex > rowsLength - 1) {
-      setCurrentIndex(rowsLength - 1);
-    }
-  }, [currentIndex, data.series, rowsLength]);
+  if (rowsLength !== 0 && currentIndex > rowsLength - 1) {
+    setCurrentIndex(rowsLength - 1);
+  }
 
   /**
    * Keep auto-scale if Auto
