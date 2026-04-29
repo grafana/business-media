@@ -31,6 +31,10 @@ media files (images, video, audio, PDF) in Grafana dashboards.
   (including `AGENTS.md`, `README.md`, `CHANGELOG.md`) and fix all reported issues before committing.
 - **Always run `npm run typecheck`** when `src/` files
   are changed and fix any type errors before committing.
+- **Always run `npm run lint`** when `src/` files are changed
+  and fix any errors before committing.
+- **Always run `npm run test:ci`** when `src/` files are changed
+  and verify all tests pass before committing.
 - **Always run `npm run spellcheck`** before committing. Fix any issues and add new words
   to `cspell.config.json` if they are legitimate.
 - **Always update `CHANGELOG.md`** when committing any
