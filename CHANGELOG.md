@@ -29,6 +29,7 @@ and breaking changes for the Business Media plugin for Grafana.
 - Optimized `test/Dockerfile`: layered COPY so `npm ci` and browser install are cached until `package.json` changes; build context reduced from 560 MB to ~1 MB via `.dockerignore`.
 - Upgraded `@grafana/plugin-e2e` to v3.6.1 to pick up native Grafana 13 UI support in `addPanel()`.
 - Updated `@swc/core`, `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`, `eslint-plugin-react-hooks`, `markdownlint-cli2`, `prettier`, `terser-webpack-plugin`, and `webpack` to latest patch/minor versions.
+- Upgraded `cspell` from v9.8.0 to v10.0.0 and `uuid` from v13.0.0 to v14.0.0.
 
 ## [7.3.0] - 2025-10-27
 
