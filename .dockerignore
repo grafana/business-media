@@ -1,0 +1,22 @@
+# Dependencies — installed fresh inside the container by npm ci
+node_modules/
+
+# Build and test artifacts
+dist/
+coverage/
+playwright-report/
+test-results/
+e2e-results/
+playwright-output.log
+
+# Version control
+.git/
+
+# Directories not needed by any Docker image built from this context
+img/
+docs/
+server-delay/
+server-json/
+server-mysql/
+server-pg/
+postgres/

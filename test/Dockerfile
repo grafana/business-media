@@ -1,17 +1,21 @@
-# Get the latest version of Playwright
 FROM mcr.microsoft.com/playwright:v1.59.1-noble
 
-# Set the work directory for the application
 WORKDIR app
 
-# COPY the needed files to the app folder in Docker image
-COPY .. .
+# Copy package manifests first so npm ci is cached independently of source changes
+COPY package.json package-lock.json ./
 
-# Install the dependencies in Node environment
 RUN npm ci
 
-# Install browsers
+# Install browsers — cached alongside npm ci, only reruns when packages change
 RUN npx playwright install --with-deps chromium
 
-# Run tests
+# Copy only what the tests need at runtime.
+# src/ is required because test utilities import constants from it.
+# provisioning/ is required by readProvisionedDashboard().
+COPY playwright.config.ts ./
+COPY src/ ./src/
+COPY provisioning/ ./provisioning/
+COPY test/ ./test/
+
 CMD ["npm", "run", "test:e2e"]

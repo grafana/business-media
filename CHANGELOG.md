@@ -26,6 +26,8 @@ and breaking changes for the Business Media plugin for Grafana.
 - Updated development scripts and tooling.
 - Enabled Grafana dev image in the Playwright E2E test matrix.
 - `test:e2e:docker` now tees all docker compose output to `playwright-output.log` for post-run inspection.
+- Optimized `test/Dockerfile`: layered COPY so `npm ci` and browser install are cached until `package.json` changes; build context reduced from 560 MB to ~1 MB via `.dockerignore`.
+- Upgraded `@grafana/plugin-e2e` to v3.6.1 to pick up native Grafana 13 UI support in `addPanel()`.
 
 ## [7.3.0] - 2025-10-27
 
