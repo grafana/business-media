@@ -57,6 +57,10 @@ and breaking changes for the Business Media plugin for Grafana.
 - Replaced deprecated `npm install --only=dev` with `npm ci` in
   Playwright Dockerfile.
 
+### Project Updates
+
+- Added `.npmrc` with `ignore-scripts=true` to disable lifecycle scripts and mitigate supply-chain attack risk.
+
 ## [7.3.0] - 2025-10-27
 
 ### Project Updates
