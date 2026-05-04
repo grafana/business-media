@@ -27,16 +27,15 @@ media files (images, video, audio, PDF) in Grafana dashboards.
 - Use `@grafana/plugin-e2e` for E2E tests.
 - Grafana API docs:
   <https://grafana.com/developers/plugin-tools/llms.txt>
-- **Always run `npx markdownlint-cli2`** on any `.md`
-  file you create or modify (including `AGENTS.md`,
-  `README.md`, `CHANGELOG.md`) and fix all reported
-  issues before committing.
+- **Always run `npm run markdownlint`** on any `.md` file you create or modify
+  (including `AGENTS.md`, `README.md`, `CHANGELOG.md`) and fix all reported issues before committing.
 - **Always run `npm run typecheck`** when `src/` files
   are changed and fix any type errors before committing.
-- **Always run cspell** after making changes:
-  `npx cspell -c cspell.config.json
-  "**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
-  and fix any issues before committing. Add new words
+- **Always run `npm run lint`** when `src/` files are changed
+  and fix any errors before committing.
+- **Always run `npm run test:ci`** when `src/` files are changed
+  and verify all tests pass before committing.
+- **Always run `npm run spellcheck`** before committing. Fix any issues and add new words
   to `cspell.config.json` if they are legitimate.
 - **Always update `CHANGELOG.md`** when committing any
   change. Include the changelog update in the same commit.
@@ -58,7 +57,7 @@ media files (images, video, audio, PDF) in Grafana dashboards.
   changes. Group bullet points under headings like
   `### Added`, `### Fixed`, `### Changed`,
   `### Removed`, `### Dependencies`, `### CI/CD`,
-  `### Documentation`, etc. Always include a
+  `### Documentation`, `### Infrastructure`, etc. Always include a
   `## Test plan` section with a checklist.
 - **Never add "Generated with Claude" or similar
   attribution lines** to PR summaries, commit messages,
@@ -81,11 +80,6 @@ npm run build
 # Dev build with watch mode
 npm run dev
 
-# Start local Grafana with plugin (Docker)
-npm start                # grafana-enterprise:12.4.0 (default)
-
-# Stop all running containers
-npm run stop
 
 # Type-check without emitting
 npm run typecheck
@@ -93,6 +87,14 @@ npm run typecheck
 # Lint
 npm run lint
 npm run lint:fix
+npm run markdownlint
+npm run spellcheck
+
+# Start local Grafana with plugin (Docker)
+npm start                # grafana-enterprise:12.4.0 (default)
+
+# Stop all running containers
+npm run stop
 
 # Unit tests — watch mode (default)
 npm test
