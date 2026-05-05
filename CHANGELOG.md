@@ -18,6 +18,10 @@ and breaking changes for the Business Media plugin for Grafana.
 - Plugin now requires Grafana 12.0.0 or newer.
 - Verified compatibility with Grafana 13.
 
+### Project Updates
+
+- Removed `pr-files.yml` workflow; GitHub's native Files changed tab supersedes it.
+
 ## [7.3.0] - 2025-10-27
 
 ### Project Updates
