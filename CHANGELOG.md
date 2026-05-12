@@ -22,6 +22,10 @@ and breaking changes for the Business Media plugin for Grafana.
 
 - Removed `pr-files.yml` workflow; GitHub's native Files changed tab supersedes it.
 
+### Project Updates
+
+- Added `.npmrc` with `ignore-scripts=true` to disable lifecycle scripts and mitigate supply-chain attack risk.
+
 ## [7.3.0] - 2025-10-27
 
 ### Project Updates
