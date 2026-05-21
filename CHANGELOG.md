@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this changelog is maintained to provide a clear history of updates, features,
 and breaking changes for the Business Media plugin for Grafana.
 
-## [Unreleased]
+## [7.3.1] - 2026-05-21
 
 ### Fixed
 
