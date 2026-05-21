@@ -3,7 +3,7 @@ FROM node
 WORKDIR /app
 
 # Install dependencies
-RUN yarn add pg
+RUN npm install pg
 
 # Copy all assets and script
 COPY ./load.ts .
