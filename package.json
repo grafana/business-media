@@ -30,7 +30,7 @@
     "@grafana/i18n": "^12.4.0",
     "@grafana/plugin-e2e": "^3.9.0",
     "@grafana/schema": "^12.4.0",
-    "@grafana/tsconfig": "2.2.0",
+    "@grafana/tsconfig": "2.0.1",
     "@playwright/test": "1.60.0",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@stylistic/eslint-plugin-ts": "4.4.1",
