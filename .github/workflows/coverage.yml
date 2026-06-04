@@ -7,7 +7,7 @@ permissions: {}
 
 jobs:
   coverage-pr:
-    name: Jest Coverage (PR)
+    name: Coverage (PR)
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -34,7 +34,7 @@ jobs:
           path: coverage/
 
   coverage-base:
-    name: Jest Coverage (base)
+    name: Coverage (base)
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -63,7 +63,7 @@ jobs:
           path: coverage/
 
   coverage-report:
-    name: Jest Coverage
+    name: Post Report
     runs-on: ubuntu-latest
     needs: [coverage-pr, coverage-base]
     permissions:
