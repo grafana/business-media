@@ -37,10 +37,6 @@ jobs:
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
         with:
           ref: ${{ github.event.pull_request.base.ref }}
-          clean: false
-
-      - name: Reset package files to base branch
-        run: git checkout HEAD -- package.json package-lock.json
 
       - name: Install dependencies (base)
         run: npm ci
