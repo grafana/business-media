@@ -39,6 +39,9 @@ jobs:
           ref: ${{ github.event.pull_request.base.ref }}
           clean: false
 
+      - name: Reset package files to base branch
+        run: git checkout HEAD -- package.json package-lock.json
+
       - name: Install dependencies (base)
         run: npm ci
 
