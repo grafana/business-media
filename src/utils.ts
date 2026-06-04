@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { DataFrame, Field, FieldMatcherID, fieldMatchers, FieldType, LinkModel, SelectableValue } from '@grafana/data';
 import { Base64 } from 'js-base64';
 
