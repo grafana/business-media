@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this changelog is maintained to provide a clear history of updates, features,
 and breaking changes for the Business Media plugin for Grafana.
 
+## Unreleased
+
+### Project Updates
+
+- Removed dependencies on `@volkovlabs/eslint-config` and `@volkovlabs/jest-selectors`. Jest selector helpers (`getJestSelectors`, `createSelector`) are now inlined under `src/test-utils/jest-selectors.ts`. ESLint now relies solely on `@grafana/eslint-config`, with existing rule violations captured in `eslint-suppressions.json`.
+
 ## [7.3.3] - 2026-05-21
 
 ### Fixed
