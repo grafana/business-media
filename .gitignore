@@ -28,6 +28,9 @@ e2e-results/
 .DS_Store
 .idea
 
+# ESLint cache
+.eslintcache
+
 # Playwright
 
 /test-results/

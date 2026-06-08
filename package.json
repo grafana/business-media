@@ -49,8 +49,6 @@
     "@types/semver": "7.7.1",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
     "@typescript-eslint/parser": "^8.38.0",
-    "@volkovlabs/eslint-config": "2.0.0",
-    "@volkovlabs/jest-selectors": "1.5.0",
     "copy-webpack-plugin": "13.0.1",
     "cspell": "10.0.1",
     "css-loader": "7.1.4",
