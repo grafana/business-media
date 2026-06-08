@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import React from 'react';
 
 const actual = jest.requireActual('@hello-pangea/dnd');
