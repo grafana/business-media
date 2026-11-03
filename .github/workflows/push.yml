@@ -15,7 +15,7 @@ concurrency:
 jobs:
   ci:
     name: CI
-    uses: grafana/plugin-ci-workflows/.github/workflows/ci.yml@ci-cd-workflows/v9.0.0
+    uses: grafana/plugin-ci-workflows/.github/workflows/ci.yml@ci-cd-workflows/v12.0.1
     permissions:
       contents: read
       pull-requests: read

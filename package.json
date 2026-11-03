@@ -1,7 +1,7 @@
 {
   "name": "business-media",
   "description": "Display Base64 encoded and URL media files",
-  "version": "7.3.3",
+  "version": "7.3.4",
   "scripts": {
     "build": "webpack -c ./webpack.config.ts --env production",
     "dev": "webpack -w -c ./webpack.config.ts --env development",
@@ -28,7 +28,7 @@
     "@babel/core": "7.29.7",
     "@grafana/eslint-config": "9.0.0",
     "@grafana/i18n": "12.4.4",
-    "@grafana/plugin-e2e": "3.9.0",
+    "@grafana/plugin-e2e": "3.15.4",
     "@grafana/schema": "12.4.4",
     "@grafana/sign-plugin": "3.3.0",
     "@grafana/tsconfig": "2.2.0",

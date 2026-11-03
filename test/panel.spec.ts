@@ -1,5 +1,5 @@
 import { test, expect } from '@grafana/plugin-e2e';
-import { PanelHelper } from './utils';
+import { PanelHelper, setVisualization } from './utils';
 
 test.describe('Media panel', () => {
   test('Check grafana version', async ({ grafanaVersion }) => {
@@ -7,7 +7,12 @@ test.describe('Media panel', () => {
     expect(grafanaVersion).toEqual(grafanaVersion);
   });
 
-  test('Should add empty default image panel', async ({ readProvisionedDashboard, gotoDashboardPage, page }) => {
+  test('Should add empty default image panel', async ({
+    readProvisionedDashboard,
+    gotoDashboardPage,
+    page,
+    selectors,
+  }) => {
     /**
      * Go to empty dashboard (avoids portal overlays blocking addPanel in Grafana 13+)
      */
@@ -20,7 +25,7 @@ test.describe('Media panel', () => {
     test.setTimeout(60000);
     const editPage = await dashboardPage.addPanel();
     await page.waitForLoadState('networkidle');
-    await editPage.setVisualization('Business Media');
+    await setVisualization(editPage, selectors, 'Business Media');
     await editPage.setPanelTitle('Business Images');
     await editPage.backToDashboard();
     await page.waitForLoadState('networkidle');
@@ -37,7 +42,7 @@ test.describe('Media panel', () => {
      * Should display info message
      */
     await panel.checkAlertMessage('Nothing to display...');
-  })
+  });
 
   test.describe('Media types', () => {
     test('Should display default image panel with base64 image', async ({
