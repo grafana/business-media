@@ -15,7 +15,7 @@ services:
       start_period: 30s
 
   postgres:
-    image: postgres
+    image: postgres@sha256:3a4264520e121176619f54ff867d12774bc81e95e7b84db58d63bccdb6144b81
     environment:
       POSTGRES_PASSWORD: postgres
     healthcheck:
